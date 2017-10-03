@@ -7,6 +7,14 @@ import {
 } from "react-router-dom";
 import '../styles/login.css'
 
+import {
+    GoogleLogin
+} from 'react-google-login-component';
+import {
+    FacebookLogin
+} from 'react-facebook-login-component';
+
+
 const I18n = require('react-redux-i18n').I18n;
 
 class LoginContainer extends Component {
@@ -19,25 +27,52 @@ class LoginContainer extends Component {
     }
     onSignInGoogle(data) {
         console.log('logeado a google');
-        return data
+        console.log(data);
+        
+        //TODO: check with backend if it's correct
+        debugger;
+        this.navTo('/details');
+        
+    }
+    responseFacebook(data) {
+        console.log(data);
+
+        //TODO: check with backend if it's correct
+        this.navTo('/details');
     }
     render() {
-        let loginText = I18n.t('login.loginTitle')
+        let loginText = I18n.t('login.loginTitle');
+
         return (
             <div className="login">
-            <div className='loginContainer'>
-        LOGO
-            <div className='loginWithMail'>
-            <input className='conocerInput email' placeholder='email'></input>
-            <input className='conocerInput password' placeholder='password'></input>
-            <ButtonContainer buttonClassName='loginButton' Key='questions' onClickEvent={this.onButtonPress.bind(this)} buttonText={loginText}/>
+                <div className='loginContainer'>
+                    <div className='loginTitle'> {loginText}</div>
+                    <div className='loginWithMail'>
+                    <input className='conocerInput email' placeholder='email'></input>
+                    <input className='conocerInput password' placeholder='password'></input>
+                    <ButtonContainer buttonClassName='loginButton' Key='questions' onClickEvent={this.onButtonPress.bind(this)} buttonText={loginText}/>
             </div>
-            <div className="g-signin2 googleButton" data-onsuccess="this.onSignInGoogle.bind(this)"></div>
-            <div className='facebookLogin'>
-            <div className="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
-      </div>
-      </div>
-      </div>
+            <div className='socialLogin'>
+            <GoogleLogin socialId="1001501503978-aju69hc996t21mkon8kr96f5oqk9c8i3.apps.googleusercontent.com"
+                     className="buttonGoogle"
+                     scope="profile"
+                     responseHandler={this.onSignInGoogle.bind(this)}
+                     buttonText="Login With Google"/>
+
+            </div>
+            <div className='socialLogin'>
+            <FacebookLogin socialId="1944132412535910"
+                       language="en_US"
+                       scope="public_profile,email"
+                       responseHandler={this.responseFacebook.bind(this)}
+                       xfbml={true}
+                       fields="id,email,name"
+                       version="v2.9"
+                       className="buttonFacebook"
+                       buttonText="Login With Facebook"/>
+              </div>
+            </div>
+          </div>
         )
     }
 }

@@ -18,7 +18,9 @@ class HeaderContainer extends Component {
     onOpenChange(value) {
         console.log('onOpenChange', value);
     }
-
+    navToHome(){
+        this.navTo('/');
+    }
     handleSelect(info) {
         this.navTo(info.item.props.Key)
     }
@@ -31,12 +33,12 @@ class HeaderContainer extends Component {
         let login = I18n.t('navItems.login');
         let items = [
             <ButtonContainer buttonClassName='navItem Button' Key='faq' key='faq' buttonText={faq} onClickEvent={this.onButtonPress.bind(this)}/>,
-            <ButtonContainer buttonClassName='navItem Button' Key='login' key='login' buttonText={login} onClickEvent={this.onButtonPress.bind(this)}/>
+            <ButtonContainer buttonClassName='navItem Button login' Key='login' key='login' buttonText={login} onClickEvent={this.onButtonPress.bind(this)}/>
         ];
 
         return (
             <div className="header">
-                <Header navItems={items} />
+                <Header onClick={this.navToHome.bind(this)}navItems={items} />
             </div>
         )
     }

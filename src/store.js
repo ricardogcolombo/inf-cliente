@@ -14,6 +14,6 @@ const store = createStore(reducers,
 
 syncTranslationWithStore(store)
 store.dispatch(loadTranslations(i18n));
-store.dispatch(setLocale('en'));
+store.dispatch(setLocale('es'));
 
 export default store;

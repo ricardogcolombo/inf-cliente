@@ -14,44 +14,44 @@ const initialState = {
         categories: [{
             "displayName": "home",
             "name": "home",
-            "score": 33
+            "score":10 
         }, {
             "displayName": "clothes",
             "name": "clothes",
-            "score": 9
+            "score": 11.25
         }, {
             "displayName": "food",
             "name": "food",
-            "score": 9
+            "score": 11.25
         }, {
             "displayName": "health",
             "name": "health",
-            "score": 9
+            "score": 11.25
         }, {
 
             "displayName": "house",
             "name": "house",
-            "score": 9
+            "score": 11.25
         }, {
 
             "displayName": "Education",
             "name": "Education",
-            "score": 9
+            "score": 11.25
         }, {
 
             "displayName": "Entretainament",
             "name": "Entretainament",
-            "score": 9
+            "score": 11.25
         }, {
 
             "displayName": "Other",
             "name": "Other",
-            "score": 9
+            "score": 11.25
         }, {
 
             "displayName": "transport",
             "name": "transport",
-            "score": 9
+            "score": 11.25
         }]
     }
 };
@@ -59,6 +59,7 @@ const initialState = {
 class DonutContainer extends Component {
     constructor(props) {
         super(props)
+        this.state = initialState;
     }
 
     componentWillReceiveProps(nextProps) {
@@ -77,12 +78,11 @@ class DonutContainer extends Component {
         let width = 640,
             height = 400,
             radius = Math.min(width, height) / 2;
-
         // This sets the radius of the pie chart to fit within
         // the current window size, with some additional padding
         // Centers the pie chart
         let x = width / 2;
-        let data = [5, 2, 7, 1, 1, 3, 4, 9]
+        let data = this.state.metricas.categories;
         let y = height / 2+90;
 
         return <div className='donutchart'> 

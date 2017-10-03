@@ -26,14 +26,8 @@ class Slice extends React.Component {
             return `translate(${x*1.8}, ${y*1.8})`;
         }
         return (
-
             <g>
-            <path d={arc(value)} fill={fill} />
-            <text transform={translate(...arc.centroid(value))}
-                dy=".35em"
-                className="label">
-                {label}
-            </text>
+                <path d={arc(value)} fill={fill} />
             </g>
         );
     }

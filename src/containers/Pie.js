@@ -15,7 +15,13 @@ class Pie extends React.Component {
 
     renderSlice(value, i) {
         // We'll create this component in a minute
-    let {innerRadius,radius, outerRadius, cornerRadius, padAngle} = this.props;
+        let {
+            innerRadius,
+            radius,
+            outerRadius,
+            cornerRadius,
+            padAngle
+        } = this.props;
         return (
             <Slice key={i}
             innerRadius={innerRadius}
@@ -24,7 +30,7 @@ class Pie extends React.Component {
              padAngle={padAngle}
             value={value}
             radius={radius}
-             label={value.data}
+            label={value}
              fill={this.colorScale(i)} />
         );
     }
@@ -37,10 +43,14 @@ class Pie extends React.Component {
         } = this.props;
         // https://github.com/d3/d3/wiki/Pie-Layout
         let pie = d3.pie();
+
         return (
             <g transform={`translate(${x}, ${y})`}>
         {/* Render a slice for each data point */}
-        {pie(data).map(this.renderSlice)}
+            {pie(data.map(function(d){
+                return d.score;
+            })).map(this.renderSlice)}
+
       </g>
         );
     }

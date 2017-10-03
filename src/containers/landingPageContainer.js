@@ -8,13 +8,12 @@ import {
 } from 'react-scroll-parallax';
 import '../styles/landingPage.css'
 
+import HowContainer from './howContainer';
+import IntentContainer from './whyContainer';
+import Footer from './footerContainer';
+
 var I18n = require('react-redux-i18n').I18n;
 
-// <div> { texts.firstQuestion } </div>
-// <div> { texts.firstAnswer } </div>
-// <div> { texts.secondQuetion } </div>
-// <div> { texts.secondAnswer } </div>
-// <div> { texts.thirdPhrase } </div>
 class AboutContainer extends Component {
     render() {
         const Scroll = () => (
@@ -36,65 +35,65 @@ class AboutContainer extends Component {
         const C1 = {
             bounds: [134, 281],
             forms: [
-            <svg viewBox="0 0 134 281">
+                <svg viewBox="0 0 134 281">
             <text x="0" y="162" fill="red">C</text>
             </svg>,
-        ],
+            ],
         };
 
         const O2 = {
             bounds: [134, 281],
             forms: [
-            <svg viewBox="0 0 134 281" version="1.1">
+                <svg viewBox="0 0 134 281" version="1.1">
 
             <text x="0" y="162" fill="red">o</text>
             </svg>,
-        ],
+            ],
         };
 
         const N3 = {
             bounds: [134, 281],
             forms: [
-            <svg viewBox="0 0 134 281" version="1.1">
+                <svg viewBox="0 0 134 281" version="1.1">
             <text x="0" y="162" fill="red">n</text>
             </svg>,
-        ]
+            ]
         };
 
         const O4 = {
             bounds: [134, 281],
             forms: [
-            <svg viewBox="0 0 134 281" version="1.1">
+                <svg viewBox="0 0 134 281" version="1.1">
             <text x="0" y="162" fill="red">o</text>
             </svg>,
-        ]
+            ]
         };
 
         const C5 = {
             bounds: [134, 281],
             forms: [
-            <svg viewBox="0 0 134 281" version="1.1">
+                <svg viewBox="0 0 134 281" version="1.1">
             <text x="0" y="162" fill="red">c</text>
             </svg>,
-        ],
+            ],
         };
 
         const E6 = {
             bounds: [134, 281],
             forms: [
-            <svg viewBox="0 0 134 281" version="1.1">
+                <svg viewBox="0 0 134 281" version="1.1">
             <text x="0" y="162" fill="red">e</text>
             </svg>,
-        ],
+            ],
         };
 
         const R7 = {
             bounds: [134, 281],
             forms: [
-            <svg viewBox="0 0 134 281" version="1.1">
+                <svg viewBox="0 0 134 281" version="1.1">
             <text x="0" y="162" fill="red">r</text>
             </svg>,
-        ],
+            ],
         };
 
         const word = [C1, O2, N3, O4, C5, E6, R7];
@@ -130,9 +129,8 @@ class AboutContainer extends Component {
 
         }
 
-
-const Gradients = () => (
-    <svg width="50" height="50" version="1.1" className="hidden">
+        const Gradients = () => (
+            <svg width="50" height="50" version="1.1" className="hidden">
         <defs>
             <linearGradient id="gradient-1" x1="0" x2="0" y1="0" y2="1">
                 <stop offset="0%" stopColor="#6ED0DD" />
@@ -160,7 +158,7 @@ const Gradients = () => (
             </linearGradient>
         </defs>
     </svg>
-);
+        );
         const ParallaxWord = () => (
             <div className="word">
                 {word.map((X, i) => 
@@ -173,8 +171,10 @@ const Gradients = () => (
             <div className="landingPage">
             <ParallaxProvider>
                 <Scroll/>
-                <Gradients/>
-                <ParallaxWord />
+            <Gradients/>
+            <HowContainer/>
+            <IntentContainer/>
+                <Footer/>
             </ParallaxProvider>
           </div>
         )

@@ -4,7 +4,8 @@ class Faqcontainer extends Component {
   render() {
     return (
       <div className="detail">
-    faq
+        //TODO   faq
+        Pending
       </div>
     )
   }

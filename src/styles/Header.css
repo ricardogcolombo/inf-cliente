@@ -115,9 +115,19 @@
     box-shadow: 0 0 4px rgba(183, 212, 240, 0.4); }
 
 .header {
-  margin: 20px; }
+  margin: 20px;
+  position: absolute;
+  top: 0;
+  width: 95%;
+  left: 0;
+  z-index: 1; }
   .header__logo {
     width: 300px; }
+  .header .navItem {
+    cursor: pointer; }
+  .header .login {
+    border: 1px solid white;
+    padding: 20px; }
   .header__navBar {
     display: -webkit-inline-box;
     float: right;

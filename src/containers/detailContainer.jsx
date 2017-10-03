@@ -10,6 +10,7 @@ import '../styles/Details.css';
 import store from '../store';
 
 import Slider from 'rc-slider';
+import Footer from './footerContainer.js';
 import DonutContainer from './donutContainer';
 
 import {
@@ -153,6 +154,9 @@ class Detailcontainer extends Component {
             <div className='charts'>
                 <DonutContainer  data={[5,10,1,3]} size={[500,500]} />
             </div>
+
+
+            <Footer className='footerDetails'/>
             </div>
         )
     }

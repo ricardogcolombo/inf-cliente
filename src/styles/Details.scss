@@ -1,10 +1,13 @@
 .detail {
+    background: white;
+    margin-top: 80px;
+
     .sliders {
         float: left;
         padding: 20px;
         width: 500px;
+        display: inline-block;
 
-        display:inline-block;
         .category {
             margin-top: 20px;
             padding-left: 30px;
@@ -16,13 +19,13 @@
                 height: 18px;
             }
         }
-        
     }
 
     .charts {
-        display:inline-block;
+        display: inline-block;
         min-height: 800px;
         min-width: 600px;
+
         .donutchart {
             min-height: 500px;
         }
