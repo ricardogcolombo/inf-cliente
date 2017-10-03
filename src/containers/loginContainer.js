@@ -30,7 +30,6 @@ class LoginContainer extends Component {
         console.log(data);
         
         //TODO: check with backend if it's correct
-        debugger;
         this.navTo('/details');
         
     }
