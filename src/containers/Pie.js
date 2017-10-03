@@ -1,0 +1,48 @@
+import React, {
+    Component
+} from 'react';
+
+import * as d3 from "d3";
+import Slice from './Slice';
+
+class Pie extends React.Component {
+    constructor(props) {
+        super(props);
+        // https://github.com/d3/d3/wiki/Ordinal-Scales#category10
+        this.colorScale = d3.scaleOrdinal(d3.schemeCategory10);
+        this.renderSlice = this.renderSlice.bind(this);
+    }
+
+    renderSlice(value, i) {
+        // We'll create this component in a minute
+    let {innerRadius,radius, outerRadius, cornerRadius, padAngle} = this.props;
+        return (
+            <Slice key={i}
+            innerRadius={innerRadius}
+             outerRadius={outerRadius}
+             cornerRadius={cornerRadius}
+             padAngle={padAngle}
+            value={value}
+            radius={radius}
+             label={value.data}
+             fill={this.colorScale(i)} />
+        );
+    }
+
+    render() {
+        let {
+            x,
+            y,
+            data
+        } = this.props;
+        // https://github.com/d3/d3/wiki/Pie-Layout
+        let pie = d3.pie();
+        return (
+            <g transform={`translate(${x}, ${y})`}>
+        {/* Render a slice for each data point */}
+        {pie(data).map(this.renderSlice)}
+      </g>
+        );
+    }
+}
+export default Pie;

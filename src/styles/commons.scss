@@ -1,0 +1,58 @@
+@import "colors.scss";
+@import "fonts.scss";
+
+.Button {
+    @include buttonText;
+
+    background-color: transparent;
+    outline: none;
+    color: white;
+    border: none;
+    padding: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-transform: uppercase;
+
+    .buttonText {
+        display: inline;
+        bottom: 5px;
+        position: relative;
+    }
+}
+
+.Field {
+    .label {
+        @include labels;
+
+        color: $white1;
+        margin-bottom: 1px;
+        left: 0;
+        padding-bottom: 1px;
+        text-align: left;
+    }
+
+    .value {
+        margin-top: 1px;
+        color: $blue1;
+
+        @include inputText;
+    }
+}
+
+.conocerInput {
+    @include inputText;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding-left: 10px;
+    border: 1px solid grey;
+    width: 300px;
+    height: 35px;
+    font-family: 'Source Sans Pro', sans-serif;
+
+    &:hover {
+        border: 1px solid #b7d4f0;
+        box-shadow: 0 0 4px rgba(183, 212, 240, 0.4);
+    }
+}

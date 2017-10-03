@@ -1,0 +1,48 @@
+@import 'colors.scss';
+@import 'fonts.scss';
+@import 'commons.scss';
+
+
+.header{
+    margin:20px;
+    &__logo{
+        width:300px;
+    }
+    &__navBar{
+        display:-webkit-inline-box;;
+        float:right;
+        right:10px;
+        margin-left:30px;
+        .rc-menu{
+            margin-bottom:0px;
+            margin-top:0px;
+            border:none;
+            background:none;
+            font-family: 'Source Sans Pro', sans-serif !important;
+            .rc-menu-submenu-title{
+                padding:10px;
+                font-family: 'Source Sans Pro', sans-serif !important;
+            }
+            .rc-submenu-active,
+            .rc-submenu-open{
+                background:none;
+                font-family: 'Source Sans Pro', sans-serif !important;
+
+            }
+            .rc-menu-item-selected,
+            .rc-menu-item-active{
+                background-color:grey;
+                font-family: 'Source Sans Pro', sans-serif !important;
+            }
+            color:white!important;
+        }
+        .navItem{
+            margin:3px;
+            margin-left:30px;
+            .buttonText{
+                padding:10px;
+            }
+        }
+        font-family: 'Source Sans Pro', sans-serif !important;
+    }
+}

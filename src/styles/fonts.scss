@@ -1,0 +1,167 @@
+$fontsPath: "../fonts";
+@font-face {
+    font-family: 'SourceSansPro';
+    src: url('#{$fontsPath}/SourceSansPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SourceSansPro-Bold';
+    src: url('#{$fontsPath}/SourceSansPro-Bold.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Icomoon';
+    src: url('#{$fontsPath}/icomoon.eot');
+    src: url('#{$fontsPath}/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('#{$fontsPath}/icomoon.woff') format('woff'),
+    url('#{$fontsPath}/icomoon.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+// font sizes Phones
+$phonetitleSize: 33px;
+$phonesubTitleSize: 23px;
+$phonelabelSize:17px;
+$phonelabelSize_2:15px;
+$phonelabelSize_3:13px;
+$phoneinputSize:18px;
+$phoneinputSize_2:16px;
+$phoneinputSize_3:15px;
+$phoneiconSize:30px;
+$phoneButtonSize:18px;
+
+// font sizes DESKTOP
+$titleSize: 43px;
+$subTitleSize: 33px;
+$labelSize:15px;
+$inputSize:15px;
+$iconSize:22px;
+$ButtonSize:15px;
+
+
+// font size Ipad
+$IpadtitleSize: 43px;
+$IpadlabelSize:25px;
+$IpadsubTitleSize: 43px;
+$IpadinputSize:27px;
+$IpadinputSize_3:24px;
+$IpadiconSize:52px;
+$IpadButtonSize:30px;
+
+$srcp:'SourceSansPro';
+$srcpbold:'SourceSansPro-Bold';
+
+$phone: "(min-width: 320px) and (max-width: 767px)";
+$tablet: "(min-width: 768px) and (max-width: 1024px)";
+$desktop: "(min-width: 1025px)";
+
+@mixin title(){
+    font-family:'SourceSansPro';
+    @media #{$phone} {
+        font-size:$phonetitleSize;
+    }
+    @media #{$tablet} {
+        font-size:$IpadtitleSize;
+    }
+    @media #{$desktop} {
+        font-size:$titleSize;
+    }
+}
+@mixin labels(){
+
+    font-family:'SourceSansPro-Bold';
+    @media #{$phone} {
+        font-size:$phonelabelSize;
+    }
+    @media #{$tablet} {
+        font-size:$IpadlabelSize;
+    }
+    @media #{$desktop} {
+        font-size:$labelSize;
+    }
+}
+@mixin labels2(){
+
+    font-family:'SourceSansPro';
+    @media #{$phone} {
+        font-size:$phonelabelSize_2;
+    }
+    @media #{$tablet} {
+        font-size:$IpadlabelSize;
+    }
+    @media #{$desktop} {
+        font-size:$labelSize;
+    }
+}
+
+@mixin inputText(){
+    font-family:'SourceSansPro';
+
+    @media #{$phone} {
+        font-size:$phoneinputSize_2;
+    }
+    @media #{$tablet} {
+        font-size:$IpadinputSize;
+    }
+    @media #{$desktop} {
+        font-size:$inputSize;
+    }
+}
+@mixin labelSubrowList{
+    font-family:'SourceSansPro';
+
+    @media #{$phone} {
+        font-size:$phoneinputSize_3;
+    }
+    @media #{$tablet} {
+        font-size:$IpadinputSize_3;
+    }
+    @media #{$desktop} {
+        font-size:$inputSize;
+    }
+
+}
+@mixin subTitle(){
+    font-family:'SourceSansPro-Bold';
+
+    @media #{$phone} {
+        font-size:$phonesubTitleSize;
+    }
+    @media #{$tablet} {
+        font-size:$IpadsubTitleSize;
+    }
+    @media #{$desktop} {
+        font-size:$subTitleSize;
+    }
+}
+
+@mixin buttonText(){
+    font-family:'SourceSansPro';
+    @media #{$phone} {
+        font-size:$phoneButtonSize;
+    }
+    @media #{$tablet} {
+        font-size:$IpadButtonSize;
+    }
+    @media #{$desktop} {
+        font-size:$ButtonSize;
+    }
+}
+
+@mixin iconText(){
+    font-family:'icomoon';
+
+    @media #{$phone} {
+        font-size:$phoneiconSize;
+    }
+    @media #{$tablet} {
+        font-size:$IpadiconSize;
+    }
+    @media #{$desktop} {
+        font-size:$iconSize;
+    }
+}

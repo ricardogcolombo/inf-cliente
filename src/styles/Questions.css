@@ -1,0 +1,178 @@
+@font-face {
+  font-family: 'SourceSansPro';
+  src: url("../fonts/SourceSansPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'SourceSansPro-Bold';
+  src: url("../fonts/SourceSansPro-Bold.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Icomoon';
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'SourceSansPro';
+  src: url("../fonts/SourceSansPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'SourceSansPro-Bold';
+  src: url("../fonts/SourceSansPro-Bold.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Icomoon';
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+.Button {
+  font-family: 'SourceSansPro';
+  background-color: transparent;
+  outline: none;
+  color: white;
+  border: none;
+  padding: 10px;
+  padding-left: 3px;
+  padding-right: 3px;
+  text-transform: uppercase; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .Button {
+      font-size: 18px; } }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .Button {
+      font-size: 30px; } }
+  @media (min-width: 1025px) {
+    .Button {
+      font-size: 15px; } }
+  .Button .buttonText {
+    display: inline;
+    bottom: 5px;
+    position: relative; }
+
+.Field .label {
+  font-family: 'SourceSansPro-Bold';
+  color: #FFFFFF;
+  margin-bottom: 1px;
+  left: 0;
+  padding-bottom: 1px;
+  text-align: left; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .Field .label {
+      font-size: 17px; } }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .Field .label {
+      font-size: 25px; } }
+  @media (min-width: 1025px) {
+    .Field .label {
+      font-size: 15px; } }
+
+.Field .value {
+  margin-top: 1px;
+  color: #094E8A;
+  font-family: 'SourceSansPro'; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .Field .value {
+      font-size: 16px; } }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .Field .value {
+      font-size: 27px; } }
+  @media (min-width: 1025px) {
+    .Field .value {
+      font-size: 15px; } }
+
+.conocerInput {
+  font-family: 'SourceSansPro';
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  padding-left: 10px;
+  border: 1px solid grey;
+  width: 300px;
+  height: 35px;
+  font-family: 'Source Sans Pro', sans-serif; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .conocerInput {
+      font-size: 16px; } }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .conocerInput {
+      font-size: 27px; } }
+  @media (min-width: 1025px) {
+    .conocerInput {
+      font-size: 15px; } }
+  .conocerInput:hover {
+    border: 1px solid #b7d4f0;
+    box-shadow: 0 0 4px rgba(183, 212, 240, 0.4); }
+
+.questions .descriptionContainer {
+  width: 50%;
+  float: left; }
+
+.questions .questionsContainer {
+  right: 30;
+  padding-right: 200px;
+  float: right; }
+  .questions .questionsContainer .question {
+    font-family: 'SourceSansPro-Bold';
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .questions .questionsContainer .answer {
+    font-family: 'Source Sans Pro', sans-serif !important; }
+    .questions .questionsContainer .answer.radioButton .rw-list {
+      display: inline-flex;
+      margin-top: 0;
+      margin-bottom: 0; }
+      .questions .questionsContainer .answer.radioButton .rw-list .rw-list-option {
+        padding-left: 15px;
+        list-style: none; }
+    .questions .questionsContainer .answer.dropdownList .rw-input {
+      background: #90C8FF;
+      border: none;
+      font-size: 15px;
+      height: 20px;
+      padding: 5px;
+      padding-top: 10px;
+      width: 100%;
+      text-transform: uppercase;
+      color: #FFF;
+      -webkit-appearance: none; }
+    .questions .questionsContainer .answer.numberPicker {
+      padding-bottom: 20px;
+      width: 100%;
+      float: right; }
+      .questions .questionsContainer .answer.numberPicker input {
+        background: #90C8FF;
+        float: left;
+        border: none;
+        font-size: 15px;
+        height: 20px;
+        padding: 5px;
+        width: 80%;
+        color: #FFF;
+        -webkit-appearance: none; }
+      .questions .questionsContainer .answer.numberPicker .rw-select {
+        display: block;
+        right: 30px;
+        float: right; }
+        .questions .questionsContainer .answer.numberPicker .rw-select .rw-btn {
+          height: 20px;
+          display: block;
+          width: 50px; }
+  .questions .questionsContainer .getReportButton {
+    background-color: #6CC23E;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5em 1em;
+    font-size: 21px;
+    cursor: pointer;
+    font-weight: bold; }

@@ -1,0 +1,50 @@
+@import "colors.scss";
+@import "fonts.scss";
+@import "commons.scss";
+
+.login {
+    background-color: transparent;
+    height: 0px;
+
+    .loginContainer {
+        background-color: white;
+        width: 500px;
+        margin: auto;
+        margin-top: 90px;
+        padding:30px;
+        box-shadow: 0 0 34px rgba(0, 0, 0, 0.4);
+
+        .loginButton {
+            width: 300px;
+            height: 45px;
+            background-color: #1aaa55;
+            border: none;
+            color: #fff;
+            margin-left: 20%;
+        }
+
+        .googleButton {
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            > div {
+                margin: auto;
+                width: 300px !important;
+            }
+        }
+
+        .email {
+            display: block;
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .password {
+            display: block;
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}

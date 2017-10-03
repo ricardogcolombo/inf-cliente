@@ -1,0 +1,20 @@
+.detail .sliders {
+  float: left;
+  padding: 20px;
+  width: 500px;
+  display: inline-block; }
+  .detail .sliders .category {
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px; }
+    .detail .sliders .category .rc-slider-handle {
+      margin-top: -7px;
+      width: 18px;
+      height: 18px; }
+
+.detail .charts {
+  display: inline-block;
+  min-height: 800px;
+  min-width: 600px; }
+  .detail .charts .donutchart {
+    min-height: 500px; }

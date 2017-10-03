@@ -1,0 +1,14 @@
+// colors
+$blue1:#094E8A;
+$blue2:#5AC7D4;
+$blue3:#b4e7ff;
+$blue4:#00dae8;;
+
+$white1:#FFFFFF;
+
+$grey1:#6f6f6f;
+
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
