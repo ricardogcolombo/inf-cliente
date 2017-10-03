@@ -120,6 +120,7 @@
   .login .loginContainer {
     background-color: white;
     width: 500px;
+    min-height: 300px;
     margin: auto;
     margin-top: 90px;
     padding: 30px;

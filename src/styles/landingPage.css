@@ -108,6 +108,17 @@
   .button:hover {
     background-image: linear-gradient(to bottom, #405D86 0%, #384257 100%); }
 
+.footer {
+  background-color: black;
+  width: 100%;
+  position: absolute;
+  height: 40px;
+  bottom: 0;
+  text-align: center;
+  padding: 50px; }
+  .footer .logo_Hexagon_pie {
+    width: 200px; }
+
 .fullscreen {
   position: fixed;
   width: 32px;

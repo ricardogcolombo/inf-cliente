@@ -37,13 +37,14 @@
         margin-left: -16em;
         font-family: 'Source Sans Pro', sans-serif;
     }
+
     .verMas {
-     font-size: 0.8em;
+        font-size: 0.8em;
         width: 55rem;
         margin-left: -8em;
         font-family: 'Source Sans Pro', sans-serif;
-    
     }
+
     svg {
         margin: 0 2rem;
     }
@@ -143,6 +144,20 @@
 
     &:hover {
         background-image: linear-gradient(to bottom, #405D86 0%, #384257 100%);
+    }
+}
+
+.footer {
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    height: 40px;
+    bottom: 0;
+    text-align: center;
+    padding: 50px;
+
+    .logo_Hexagon_pie {
+        width: 200px;
     }
 }
 
