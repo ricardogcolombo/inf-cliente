@@ -114,65 +114,91 @@
     border: 1px solid #b7d4f0;
     box-shadow: 0 0 4px rgba(183, 212, 240, 0.4); }
 
-.questions .descriptionContainer {
-  width: 50%;
-  float: left; }
-
-.questions .questionsContainer {
-  right: 30;
-  padding-right: 200px;
-  float: right; }
-  .questions .questionsContainer .question {
-    font-family: 'SourceSansPro-Bold';
-    padding-top: 10px;
-    padding-bottom: 10px; }
-  .questions .questionsContainer .answer {
-    font-family: 'Source Sans Pro', sans-serif !important; }
-    .questions .questionsContainer .answer.radioButton .rw-list {
-      display: inline-flex;
-      margin-top: 0;
-      margin-bottom: 0; }
-      .questions .questionsContainer .answer.radioButton .rw-list .rw-list-option {
-        padding-left: 15px;
-        list-style: none; }
-    .questions .questionsContainer .answer.dropdownList .rw-input {
-      background: #90C8FF;
-      border: none;
-      font-size: 15px;
-      height: 20px;
-      padding: 5px;
+.questions {
+  background: white;
+  margin-top: 80px;
+  height: 100%;
+  z-index: 3;
+  position: fixed;
+  width: 100%; }
+  .questions .descriptionContainer .title {
+    font-size: 48px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px; }
+  .questions .descriptionContainer .description {
+    font-size: 18px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 50px;
+    text-align: center; }
+  .questions .questionsContainerItem {
+    width: 33.33%;
+    padding-left: 80px;
+    padding-right: 80px; }
+    .questions .questionsContainerItem .dropdownForm {
+      width: 300px; }
+    .questions .questionsContainerItem .inputForm input {
+      width: 300px; }
+  .questions .questionsContainer {
+    display: flex; }
+    .questions .questionsContainer .question {
+      font-family: 'SourceSansPro-Bold';
       padding-top: 10px;
-      width: 100%;
-      text-transform: uppercase;
-      color: #FFF;
-      -webkit-appearance: none; }
-    .questions .questionsContainer .answer.numberPicker {
-      padding-bottom: 20px;
-      width: 100%;
-      float: right; }
-      .questions .questionsContainer .answer.numberPicker input {
+      padding-bottom: 10px; }
+    .questions .questionsContainer .answer {
+      font-family: 'Source Sans Pro', sans-serif !important; }
+      .questions .questionsContainer .answer.radioButton .rw-list {
+        display: inline-flex;
+        margin-top: 0;
+        margin-bottom: 0; }
+        .questions .questionsContainer .answer.radioButton .rw-list .rw-list-option {
+          padding-left: 15px;
+          list-style: none; }
+      .questions .questionsContainer .answer.dropdownList .rw-input {
         background: #90C8FF;
-        float: left;
         border: none;
         font-size: 15px;
         height: 20px;
         padding: 5px;
-        width: 80%;
+        padding-top: 10px;
+        width: 100%;
+        text-transform: uppercase;
         color: #FFF;
         -webkit-appearance: none; }
-      .questions .questionsContainer .answer.numberPicker .rw-select {
-        display: block;
-        right: 30px;
+      .questions .questionsContainer .answer.numberPicker {
+        padding-bottom: 20px;
+        width: 100%;
         float: right; }
-        .questions .questionsContainer .answer.numberPicker .rw-select .rw-btn {
+        .questions .questionsContainer .answer.numberPicker input {
+          background: #90C8FF;
+          float: left;
+          border: none;
+          font-size: 15px;
           height: 20px;
+          padding: 5px;
+          width: 80%;
+          color: #FFF;
+          -webkit-appearance: none; }
+        .questions .questionsContainer .answer.numberPicker .rw-select {
           display: block;
-          width: 50px; }
-  .questions .questionsContainer .getReportButton {
-    background-color: #6CC23E;
-    border: none;
-    border-radius: 8px;
-    padding: 0.5em 1em;
-    font-size: 21px;
-    cursor: pointer;
-    font-weight: bold; }
+          right: 30px;
+          float: right; }
+          .questions .questionsContainer .answer.numberPicker .rw-select .rw-btn {
+            height: 20px;
+            display: block;
+            width: 50px; }
+  .questions .reportButton {
+    text-align: center;
+    padding: 20px;
+    padding-top: 50px; }
+    .questions .reportButton .getReportButton {
+      background-color: #6CC23E;
+      border: none;
+      width: 300px;
+      border-radius: 8px;
+      padding: 0.5em 1em;
+      font-size: 21px;
+      cursor: pointer;
+      font-weight: bold; }

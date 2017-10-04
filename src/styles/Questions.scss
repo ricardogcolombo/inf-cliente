@@ -1,59 +1,96 @@
-@import 'colors.scss';
-@import 'fonts.scss';
-@import 'commons.scss';
+@import "colors.scss";
+@import "fonts.scss";
+@import "commons.scss";
 
-.questions{
-    .descriptionContainer{
-        width:50%;
-        float:left;
-    }
-    .questionsContainer{
-        right:30;
-        padding-right: 200px;
-        float:right;
-        .question{
-            font-family: 'SourceSansPro-Bold';
-            padding-top:10px;
-            padding-bottom:10px;
+.questions {
+    background: white;
+    margin-top: 80px;
+    height: 100%;
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+
+    .descriptionContainer {
+        .title {
+            font-size: 48px;
+            text-align: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
         }
-        .answer{
+
+        .description {
+            font-size: 18px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            padding-left:40px;
+            padding-right:50px;
+            text-align:center;
+        }
+    }
+
+    .questionsContainerItem {
+        width: 33.33%;
+        padding-left: 80px;
+        padding-right: 80px;
+
+        .dropdownForm{
+            width:300px;
+        }
+        .inputForm input{
+            width:300px;
+        }
+    }
+
+    .questionsContainer {
+        display: flex;
+
+        .question {
+            font-family: 'SourceSansPro-Bold';
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .answer {
             font-family: 'Source Sans Pro', sans-serif !important;
-            &.radioButton{
-                .rw-list{
-                    display:inline-flex;
-                    margin-top:0;
-                    margin-bottom:0;
-                    .rw-list-option{
-                        padding-left:15px;
+
+            &.radioButton {
+                .rw-list {
+                    display: inline-flex;
+                    margin-top: 0;
+                    margin-bottom: 0;
+
+                    .rw-list-option {
+                        padding-left: 15px;
                         list-style: none;
                     }
                 }
-
             }
-            &.dropdownList{
-                .rw-popup-container .rw-popup-animating{
 
-                }
-                .rw-input{
+            &.dropdownList {
+                .rw-popup-container .rw-popup-animating {}
+
+                .rw-input {
                     background: #90C8FF;
                     border: none;
                     font-size: 15px;
                     height: 20px;
                     padding: 5px;
-                    padding-top:10px;
+                    padding-top: 10px;
                     width: 100%;
-                    text-transform:uppercase;
+                    text-transform: uppercase;
                     color: #FFF;
                     -webkit-appearance: none;
                 }
             }
-            &.numberPicker{
+
+            &.numberPicker {
                 padding-bottom: 20px;
-                width:100%;
-                float:right;
-                input{
+                width: 100%;
+                float: right;
+
+                input {
                     background: #90C8FF;
-                    float:left;
+                    float: left;
                     border: none;
                     font-size: 15px;
                     height: 20px;
@@ -62,23 +99,30 @@
                     color: #FFF;
                     -webkit-appearance: none;
                 }
-                .rw-select{
+
+                .rw-select {
                     display: block;
-                    right:30px;
-                    float:right;
-                    .rw-btn{
+                    right: 30px;
+                    float: right;
+
+                    .rw-btn {
                         height: 20px;
-                        display:block;
+                        display: block;
                         width: 50px;
                     }
                 }
             }
-
         }
-        .getReportButton{
+    }
 
+    .reportButton {
+        text-align:center;
+        padding:20px;
+        padding-top:50px;
+        .getReportButton {
             background-color: #6CC23E;
             border: none;
+            width:300px;
             border-radius: 8px;
             padding: 0.5em 1em;
             font-size: 21px;

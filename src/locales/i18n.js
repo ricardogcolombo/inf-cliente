@@ -159,7 +159,7 @@ const i18n = {
             "title": "Preguntas Frecuentes"
         },
         "detailsQuestions": {
-            "calculateInflation": "Calcula tu inflacion",
+            "calculateInflation": "Calcula tu inflación",
             "firstParagraph": "¡HOLA! COMPLETÁ EL FORMULARIO CON TU INFORMACIÓN PERSONAL, SELECCIONÁ EL NIVEL DE CONSUMO DE TUS BIENES Y SERVICIOS Y CONOCÉ EL PORCENTAJE DE INFLACIÓN APLICADA A TUS GASTOS MENSUALES.",
             "getReport":"Calcular",
             "questions": {
