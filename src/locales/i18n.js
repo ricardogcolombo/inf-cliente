@@ -2,111 +2,116 @@ const i18n = {
     "en": {
         "nav": {
             "about": {
-                "aboutTitle": "WHAT IS CONOCER?",
-                "whatis": "About Conocer",
-                "why": "Why it is important know your inflation rate",
-                "how": "How does it works",
+                "aboutTitle": "About Conocer",
+                "whatis": "What is Conocer",
+                "why": "Why it's important know about your inflation rate",
+                "how": "How it works",
                 "intent": "Intent"
             },
-            "caracteristics": "HOW IT WORKS?",
-            "faq": "FAQ's",
-            "login": "Login"
+            "faq": "Frequent questions",
+            "login": "Sign up"
         },
-        "category": {
-            "food": "Food and non-alcoholic beverages",
-            "clothes": "Clothing and footwear",
-            "house": "Housing, water, electricity and other fuels",
-            "home": "Equipment and household maintenance",
-            "health": "Health",
-            "transport": "Transport",
-            "entretainament": "Recreation and culture",
-            "education": "Education",
-            "other": "Miscellaneous goods and services"
+        "about": {
+            "what": {
+                "firstQuestion": "What is conocer",
+                "firstAnswer": "CONOCER is a digital tool designed to calculate inflation based on the level of consumption entered. It also allows a future projection of the evolution of consumption and savings. In other words, by entering your expenses, you will have a general overview of your inflation, and you will know how much you can save based on your monthly budget.",
+                "secondQuetion": "CONOCER, Innovation Award",
+                "secondAnswer": "The Central Bank of Argentina together with the Ministry of Production and the Ministry of Modernization organized the first Financial Hackathon in 2016 with the aim of encouraging innovation in the financial industry in the country.",
+                "thirdPhrase": "CONOCER, developed HEXAGON, was chosen finalist among other 36 projects presented and obtained the first place in technological innovation."
+            },
+            "how": {
+                "firstQuestion": "HOW DOES IT WORK?",
+                "secondQuetion": " Each person buys different things ",
+                "secondAnswer": "Each family has its own habits of consumption: some have cars and eat meat, and others only travel by public transport and are vegetarian. The average consumption habits of the families as a whole determine the weight of the different goods and services in the calculation of inflation.",
+                "secondParagraph": "In order to calculate inflation, all goods and services consumed by households, including daily consumer goods, durable goods and services, are taken into account.",
+                "thirdQuestion": "How are consumer spending classified?",
+                "thirdAnswer1": "The classification system of the Classification Price Index of the City of Buenos Aires (IPCBA) is made up of 12 classifications:",
+                "thirdAnswer2": "Food and non-alcoholic beverages; Alcoholic beverages and tobacco; Clothing and footwear; Housing, water, electricity and other fuels; Equipment and household maintenance; Health; Transport; Communications; Recreation and culture; Education; Restaurants and hotels; Miscellaneous goods and services.",
+                "fourthQuestion": "So, how is inflation calculated?",
+                "fourthAnswer1": "CONOCER calculates the inflation according to the information entered and allows to obtain the percentage of average inflation and the percentage of your personal inflation with respect to your expenses, according to the IPCBA. The application generates a ",
+                "fourthAnswer2": "The application generates a projection that allows you to see the evolution of general consumption over a period of time, making it possible to estimate how much your expenses and future savings will be."
+            },
+            "why": {
+
+                "firstQuestion": "WHY IT IS IMPORTANT TO KNOW YOUR INFLATION?",
+                "firstAnswer1": "Inflation is the generalized and sustained increase in the level of prices in the market over a period of time.When the general level of prices rises,fewer goods and services are purchased with each unit of currency.that inflation reflects the decline in purchasing power.",
+                "firstAnswer2": "A frequent measure of inflation is the price index, which corresponds to the analyzed percentage of the general price change over time (the most common is the consumer price index).",
+                "firstAnswer3": "The effects of inflation on an economy are diverse, and can be both positive and negative. The negative effects of inflation include declining currency value over time, discouragement of savings and investment, and shortages of goods.",
+                "firstAnswer4": "So why is it important? Because it is a determining factor that has a direct impact on people's pockets. The capacity of consumption, investment and saving decreases, affecting the economy of the country.",
+                "firstAnswer5": "CONOCER aims to help people manage their budget responsibly and intelligently and improve their savings capacity by providing personalized financial advice based on real-time data. SUPPLIES"
+            },
+            "intent": {
+                "firstQuestion": "WHAT WILL YOU KNOW?",
+                "firstAnswer1": "As a consumer, you will be able to:", 
+                "firstAnswer2": "Know how much your expenses will increase. Get metrics from your budget in real time. Estimate your monthly savings capacity. Plan your purchases. Achieve your financial goals.",
+                "firstAnswer3": "In short, CONOCER helps you to take care of your money."
+            }
         },
-
-        "about1": "CONOCER is an online tool that calculates the inflation in a personalized way and obtains a projection, allows to see the evolution of the consumption in a period of time by sector, and estimates how much the expenses and savings will be in the future.",
-        "about2": "",
-        "about3": "This tool allows you to know the value of the Consumer Price Index with in relation with your spending structure and gives you specific information of how the index that compose it are made of.",
-
-        "aboutList1": "Food and non-alcoholic beverages",
-        "aboutList2": "Clothing and footwear",
-        "aboutList3": "Housing, water, electricity and other fuels",
-        "aboutList4": "Equipment and household maintenance",
-        "aboutList5": "Health",
-        "aboutList6": "Transport",
-        "aboutList7": "Recreation and culture",
-        "aboutList8": "Education",
-        "aboutList9": "Miscellaneous goods and services.",
-
-
-        "aboutViewQuestion": "WHY?",
-        "aboutViewAnswer": "Inflation is one of the most important issues in economics. A sustained increase in the general price level of goods and services in an economy over a period of time. Why is it important? Because it is a crucial factor in determining the rates banks charge for mortgages and the rates they offer on savings accounts. It also has a direct impact on some people's incomes.",
-        "aboutViewAnswe2": "The main purpose of CONOCER is to help people become smarter consumers by providing personalized financial advice based on data and consumption.",
-
-        "howWorks": "Each person buys different stuff",
-        "explanation1": "Each family has its own habits of consumption: some have cars and eat meat, and others only travel by public transport and are vegetarian. This means that the average consumption habits of the families determine the weight of the different goods and services in the calculation of inflation. ",
-        "explanation2": "To calculate inflation, all the goods and services consumed by families are taken into account. ",
-        "explanation4": "Through the use of gamification, the application can channel users interest in knowing what the inflation is, the expectations of the population and knowing the annual goals established, to plan their financial future in an effective and intelligent way.",
-
-        "youcan": "As a consumer you can:",
-        "canList1": "Manage your financial status in a clear and predictive way.",
-        "canList2": "Get your budget metrics in real time.",
-        "canList3": "Access to saving and financing opportunities",
-        "canList4": "Have a connection with savings, through personalized advice and alerts.",
-        "hexagon": "CONOCER is a product created by HEXAGON Consulting, an IT company from Argentina. We understand that innovation is one of the key factors for the development of a company and its competitive advantage, that’s why we created a research and development laboratory focused on Artificial Intelligence and Big Data, always considering customer experience.",
-
-        "personalized": "Customized Inflation ",
-        "learn": "Learn how inflation impacts your pocket and manage your future consumption in the simplest and most intelligent way.",
-        "start": "TRY IT NOW",
-        "user": "User",
-        "rememberPass": "Remember Password",
-        "calculateInflation": "Calculate your inflation ",
-        "age": "Age:",
-        "gender": "Gender:",
-        "male": "MALE",
-        "female": "FEMALE",
-        "educationQuestion": "What is your highest degree reached ?",
-        "elementary": "Elementary",
-        "highSchool": "High School",
-        "bsms": "Bachelor's Degree/Master's Degree",
-        "workQuestion": "What is your employment situation?",
-        "unemployed": "UNENPLOYED",
-        "employed": "EMPLOYEE",
-        "freelance": "FREELANCER",
-        "retired": "RETIRED",
-
-        "healthQuestion": "which health insurance coverage do you have?",
-        "obligatory": "OBLIGATORY",
-        "work": "Preferred provider organization",
-        "prepay": "pay for assistance",
-
-        "familyQueston": "what is the age of the members of your family?",
-        "middle": "between 19 and 59?",
-        "low": "less than 18?",
-        "high": "more than 60?",
-
-        "rent": "Do you rent an appartment?",
-        "yes": "YES",
-        "no": "NO",
-
-        "car": "Do you have car?",
-        "have1": "I HAVE ONE",
-        "havemore": "I HAVE MORE THAN ONE",
-
-        "moneyquestion": "HOW MUCH MONEY DO YOU SPENT ON A MONTH?",
-        "instructions": "Build a report and analysis of your inflation easy, just complete some information.",
-
-        "graphic": "BUILD REPORTS",
-
-        "consumos": "Consumption",
-        "inflationRate": "Infation Rate",
-        "evolution": "Evolution",
-        "average": "Average Inflation Rate",
-        "periodRate": " Government inflation rates from January 2016 to January 2017",
-        "yourInflation": "Your Inflation Rate",
-        "dataInfo": "Following your consume and the Inflation Rate",
-        "consumePercentage": "Percentage of consumption",
-        "evolutionConsumptionDescription": "This chart shows you the compsumption on each family with the difference of the last month fruthermore shows how will be the evolution on the next year"
+        "faq": {
+            "title": "Frequent questions"
+        },
+        "detailsQuestions": {
+            "calculateInflation": "Calculate your inflation",
+            "firstParagraph": "HELLO! COMPLETE THE FORM WITH YOUR PERSONAL INFORMATION, SELECT THE CONSUMPTION LEVEL OF YOUR GOODS AND SERVICES AND KNOW THE INFLATION PERCENTAGE APPLIED TO YOUR MONTHLY EXPENSES.",
+            "getReport": "Calculate",
+            "questions": {
+                "age": "Age?",
+                "gender": "¿Gender?",
+                "lvlEducation": "Highest degree reached?",
+                "employee": "¿Work status?",
+                "medic": "Health Insurance",
+                "family": "How is your Family group composed?",
+                "rent": "Pay a rent?",
+                "car": "Do you have a car?",
+                "salary": "What is your approximate total monthly expenditure?"
+            },
+            "answers": {
+                "gender": [
+                    "Man",
+                    "Woman"
+                ],
+                "school": [
+                    "SCHOOL",
+                    "High School",
+                    "Master Degree"
+                ],
+                "work": [
+                    "Unenployed",
+                    "Employee",
+                    "Freelance",
+                    "Retired"
+                ],
+                "health": ["Obligatory",
+                    "Private Health Insurace",
+                    "Pay par atention"
+                ],
+                "family": ["People between 19 years and 59 years?",
+                    "People under 18?",
+                    "People over 60?"
+                ],
+                "rent": ["OWNER", "RENT"],
+                "basicAnswer": ["YES", "NO"]
+            }
+        },
+        "login": {
+            "loginTitle": "login",
+            "user": "user",
+            "email ": "email ",
+            "password": "password",
+            "tryButton": "try it now",
+            "rememberPass": "remember password"
+        },
+        "categories": {
+            "Food": "Food",
+            "Clothes": "Clothes",
+            "House": "House",
+            "Home": "Home",
+            "Health": "Health",
+            "Transport": "Transport",
+            "Entretainament": "Entretainament",
+            "Education": "Education",
+            "Other": "Other"
+        }
     },
     "es": {
         "nav": {
@@ -161,7 +166,7 @@ const i18n = {
         "detailsQuestions": {
             "calculateInflation": "Calcula tu inflación",
             "firstParagraph": "¡HOLA! COMPLETÁ EL FORMULARIO CON TU INFORMACIÓN PERSONAL, SELECCIONÁ EL NIVEL DE CONSUMO DE TUS BIENES Y SERVICIOS Y CONOCÉ EL PORCENTAJE DE INFLACIÓN APLICADA A TUS GASTOS MENSUALES.",
-            "getReport":"Calcular",
+            "getReport": "Calcular",
             "questions": {
                 "age": "¿Edad?",
                 "gender": "¿GÉNERO?",

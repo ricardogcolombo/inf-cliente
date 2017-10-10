@@ -1,6 +1,7 @@
 .detail {
     background: white;
     margin-top: 80px;
+    min-height:700px;
 
     .sliders {
         float: left;
@@ -23,7 +24,7 @@
 
     .charts {
         display: inline-block;
-        min-height: 800px;
+        min-height: 500px;
         min-width: 600px;
 
         .donutchart {

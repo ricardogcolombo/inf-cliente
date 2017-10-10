@@ -4,6 +4,7 @@ import React, {
 
 import * as d3 from "d3";
 import Slice from './Slice';
+import Label from './LabelsForCharts';
 
 class Pie extends React.Component {
     constructor(props) {
@@ -11,6 +12,26 @@ class Pie extends React.Component {
         // https://github.com/d3/d3/wiki/Ordinal-Scales#category10
         this.colorScale = d3.scaleOrdinal(d3.schemeCategory10);
         this.renderSlice = this.renderSlice.bind(this);
+        this.renderLabel = this.renderLabel.bind(this);
+    }
+
+    renderLabel(value, i) {
+        let {
+            innerRadius,
+            radius,
+            outerRadius,
+            cornerRadius,
+            padAngle
+        } = this.props;
+
+        return <Label key={i}
+            innerRadius={innerRadius}
+            outerRadius={outerRadius}
+            cornerRadius={cornerRadius}
+             padAngle={padAngle}
+             value={value}
+             radius={radius}
+             label={value} />
     }
 
     renderSlice(value, i) {
@@ -24,13 +45,13 @@ class Pie extends React.Component {
         } = this.props;
         return (
             <Slice key={i}
-            innerRadius={innerRadius}
+             innerRadius={innerRadius}
              outerRadius={outerRadius}
              cornerRadius={cornerRadius}
              padAngle={padAngle}
-            value={value}
-            radius={radius}
-            label={value}
+             value={value}
+             radius={radius}
+             label={value}
              fill={this.colorScale(i)} />
         );
     }
@@ -45,13 +66,22 @@ class Pie extends React.Component {
         let pie = d3.pie();
 
         return (
-            <g transform={`translate(${x}, ${y})`}>
+            <g>
+            <g className='slices' transform={`translate(${x}, ${y})`}>
         {/* Render a slice for each data point */}
             {pie(data.map(function(d){
                 return d.score;
             })).map(this.renderSlice)}
+            </g>
 
-      </g>
+            <g className='labels' transform={`translate(${x}, ${y})`}>
+        {/* Render a slice for each data point */}
+            {pie(data.map(function(d){
+                return d;
+            })).map(this.renderLabel)}
+            </g>
+
+            </g>
         );
     }
 }

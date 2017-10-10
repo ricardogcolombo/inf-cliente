@@ -86,14 +86,13 @@ class DonutContainer extends Component {
         let y = height / 2+90;
 
         return <div className='donutchart'> 
-            <svg width="100%" height="800px">
+            <svg width="100%" height="600px">
             <Pie x={x} y={y} 
              radius={radius}
              innerRadius={radius * .35}
              outerRadius={radius}
              cornerRadius={7}
-             padAngle={.02}
-        
+             padAngle={.01}
         data={data} />
              </svg>
             </div>

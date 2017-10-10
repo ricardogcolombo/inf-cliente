@@ -6,7 +6,7 @@ import reducers from './reducers';
 
 import thunk from 'redux-thunk';
 
-import i18n from './locales/i18n.js';
+import i18n from './locales/i18n';
 import { loadTranslations, setLocale, syncTranslationWithStore} from 'react-redux-i18n';
 const store = createStore(reducers,
     applyMiddleware(thunk)

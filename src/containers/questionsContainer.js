@@ -7,9 +7,10 @@ import {
 
 
 import {
-	Input,
-	Dropdown
+	Input
 } from 'semantic-ui-react'
+
+import Dropdown from 'react-dropdown'
 import ButtonContainer from './ButtonContainer.js';
 import '../styles/Questions.css'
 
