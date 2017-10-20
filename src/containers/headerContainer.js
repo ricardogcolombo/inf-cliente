@@ -59,8 +59,8 @@ class HeaderContainer extends Component {
         }].map(getArrayForDropdown);
 
         let items = [
-            <ButtonContainer buttonClassName='navItem Button' Key='faq' buttonText={faq} onClickEvent={this.onButtonPress.bind(this)}/>,
-            <ButtonContainer buttonClassName='navItem Button login' Key='login' buttonText={login} onClickEvent={this.onButtonPress.bind(this)}/>
+            <ButtonContainer buttonClassName='navItem Button' Key='faq' key='faq' buttonText={faq} onClickEvent={this.onButtonPress.bind(this)}/>,
+            <ButtonContainer buttonClassName='navItem Button login' Key='login' key='login' buttonText={login} onClickEvent={this.onButtonPress.bind(this)}/>
         ];
 
         return (
