@@ -6,7 +6,7 @@ import * as d3 from "d3";
 import Slice from './Slice';
 import Label from './LabelsForCharts';
 
-class Pie extends React.Component {
+class Pie extends Component {
     constructor(props) {
         super(props);
         // https://github.com/d3/d3/wiki/Ordinal-Scales#category10

@@ -1,11 +1,10 @@
 import React, {
-
     Component
 } from 'react';
 
 import logo_Hexagon_pie from '../images/logo_Hexagon_pie.png'
 
-class Footer extends React.Component {
+class Footer extends Component {
     render() {
         return (
             <div className="footer" >

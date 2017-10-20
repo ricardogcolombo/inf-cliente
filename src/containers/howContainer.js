@@ -5,8 +5,6 @@ import {
     PropTypes
 } from 'prop-types'
 
-import I18n from 'redux-i18n'
-
 class HowContainer extends Component {
     render() {
         let about = this.context.t('about').how;

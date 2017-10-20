@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 
+        //TODO   faq
 class Faqcontainer extends Component {
   render() {
     return (
       <div className="detail">
-        //TODO   faq
         Pending
       </div>
     )

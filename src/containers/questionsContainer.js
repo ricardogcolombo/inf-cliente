@@ -6,7 +6,6 @@ import {PropTypes} from 'prop-types'
 import {
 	withRouter
 } from "react-router-dom";
-import {connect} from 'react-redux'
 
 import {
 	Input
@@ -95,7 +94,7 @@ class QuestionsContainer extends Component {
 
 			</div>
 			<div className='reportButton'>
-            <ButtonContainer buttonClassName='getReportButton Button' Key='faq' key='faq' buttonText={getReport} onClickEvent={this.onDetailsPress.bind(this)}/>,
+            <ButtonContainer buttonClassName='getReportButton Button' Key='faq' buttonText={getReport} onClickEvent={this.onDetailsPress.bind(this)}/>,
             </div>
             </div>
 		)

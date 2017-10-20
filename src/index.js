@@ -19,9 +19,7 @@ import {
     translations
 } from './locales/i18n'
 import {
-    Router,
-    Switch,
-    Route
+    Router
 } from 'react-router'
 
 import createBrowserHistory from 'history/createBrowserHistory'

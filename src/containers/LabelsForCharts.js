@@ -4,20 +4,15 @@ import React, {
 
 import * as d3 from "d3";
 
-class Label extends React.Component {
+class Label extends Component {
     onRef(ref) {
         this.text = ref;
         this.translate(this.props.value)
     }
     translate(d) {
         let {
-            value,
-            padAngle,
-            cornerRadius,
-            innerRadius = 0,
             outerRadius,
-            radius,
-            label
+            radius
         } = this.props;
 
         this.text = d;
@@ -41,9 +36,7 @@ class Label extends React.Component {
             padAngle,
             cornerRadius,
             innerRadius = 0,
-            outerRadius,
-            radius,
-            label
+            outerRadius
         } = this.props;
 
         // https://github.com/d3/d3/wiki/SVG-Shapes#arc
@@ -53,10 +46,6 @@ class Label extends React.Component {
             .cornerRadius(cornerRadius)
             .padAngle(padAngle);
 
-        let _self = this;
-
-
-        let pie = d3.pie();
         return ( < text ref = {
                 this.onRef.bind(this)
             }

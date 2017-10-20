@@ -6,7 +6,6 @@ import Button from '../components/button/Button';
 
 class ButtonContainer extends Component {
     onTouchCancel() {
-        console.log("cancelScan");
         this.setState({
             trackingClick: false,
             targetElement: null
@@ -39,7 +38,6 @@ class ButtonContainer extends Component {
 
     }
     onTouchStart() {
-        console.log("startScan");
         this.setState({
             trackingClick: true,
 

@@ -6,9 +6,7 @@ import {
     PropTypes
 } from 'prop-types'
 
-import I18n from 'redux-i18n'
-
-class IntentContainer extends React.Component {
+class IntentContainer extends Component {
     render() {
         let intent= this.context.t('about').intent;
         let firstQuestion = intent.firstQuestion;

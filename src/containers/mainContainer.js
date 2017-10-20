@@ -3,8 +3,7 @@ import React, {
 } from 'react';
 import {
     Switch,
-    Route,
-    Link
+    Route
 } from 'react-router-dom'
 
 import landingPage from './landingPageContainer';
@@ -25,6 +24,7 @@ class MainContainer extends Component {
                 <Route path="/login" component={LoginContainer} />
                 <Route path="/details" component={DetailContainer} />
             </Switch>
+            
             </div>
         )
     }

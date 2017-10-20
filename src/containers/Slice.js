@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 
 import * as d3 from "d3";
-class Slice extends React.Component {
+class Slice extends Component {
     render() {
         let {
             value,
@@ -11,8 +11,7 @@ class Slice extends React.Component {
             padAngle,
             cornerRadius,
             innerRadius = 0,
-            outerRadius,
-            label
+            outerRadius
         } = this.props;
 
         // https://github.com/d3/d3/wiki/SVG-Shapes#arc
@@ -22,9 +21,6 @@ class Slice extends React.Component {
             .cornerRadius(cornerRadius)
             .padAngle(padAngle);
 
-        function translate(x, y) {
-            return `translate(${x*1.8}, ${y*1.8})`;
-        }
         return (
             <g>
                 <path d={arc(value)} fill={fill} />
