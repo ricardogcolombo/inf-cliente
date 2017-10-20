@@ -40,17 +40,17 @@ export function getMetricas(id) {
         }, {
 
             "displayName": "Education",
-            "name": "Education",
+            "name": "education",
             "score": 9
         }, {
 
             "displayName": "Entretainament",
-            "name": "Entretainament",
+            "name": "entretainament",
             "score": 9
         }, {
 
             "displayName": "Other",
-            "name": "Other",
+            "name": "other",
             "score": 9
         }, {
 
