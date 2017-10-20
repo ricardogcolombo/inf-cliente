@@ -1,5 +1,7 @@
-const i18n = {
+export const translations = {
     "en": {
+
+        'Hello world!': '¡Hello mundo!',
         "nav": {
             "about": {
                 "aboutTitle": "About Conocer",
@@ -9,7 +11,7 @@ const i18n = {
                 "intent": "Intent"
             },
             "faq": "Frequent questions",
-            "login": "Sign up"
+            "login": "login/Sign up"
         },
         "about": {
             "what": {
@@ -42,7 +44,7 @@ const i18n = {
             },
             "intent": {
                 "firstQuestion": "WHAT WILL YOU KNOW?",
-                "firstAnswer1": "As a consumer, you will be able to:", 
+                "firstAnswer1": "As a consumer, you will be able to:",
                 "firstAnswer2": "Know how much your expenses will increase. Get metrics from your budget in real time. Estimate your monthly savings capacity. Plan your purchases. Achieve your financial goals.",
                 "firstAnswer3": "In short, CONOCER helps you to take care of your money."
             }
@@ -114,6 +116,7 @@ const i18n = {
         }
     },
     "es": {
+        'Hello world!': '¡Hola mundo!',
         "nav": {
             "about": {
                 "aboutTitle": "Sobre Conocer",
@@ -123,7 +126,7 @@ const i18n = {
                 "intent": "Para qué sirve conocer"
             },
             "faq": "Preguntas frecuentes",
-            "login": "Registrate"
+            "login": "Ingresa/Registrate"
         },
         "about": {
             "what": {
@@ -227,4 +230,3 @@ const i18n = {
         }
     }
 };
-module.exports = i18n

@@ -1,21 +1,26 @@
 import React, {
     Component
 } from 'react';
+import {
+    PropTypes
+} from 'prop-types'
 
-var I18n = require('react-redux-i18n').I18n;
+import I18n from 'redux-i18n'
 
 class HowContainer extends Component {
     render() {
-        let firstQuestion = I18n.t('about.how.firstQuestion');
-        let secondQuetion = I18n.t('about.how.secondQuetion');
-        let secondAnswer = I18n.t('about.how.secondAnswer');
-        let secondParagraph = I18n.t('about.how.paragraph');
-        let thirdQuestion = I18n.t('about.how.thirdQuestion');
-        let thirdAnswer1 = I18n.t('about.how.thirdAnswer1');
-        let thirdAnswer2 = I18n.t('about.how.thirdAnswer2');
-        let fourthQuestion = I18n.t('about.how.fourthQuestion');
-        let fourthAnswer1 = I18n.t('about.how.fourthAnswer1');
-        let fourthAnswer2 = I18n.t('about.how.fourthAnswer2');
+        let about = this.context.t('about').how;
+
+        let firstQuestion = about.firstQuestion;
+        let secondQuetion = about.secondQuetion;
+        let secondAnswer = about.secondAnswer;
+        let secondParagraph = about.paragraph;
+        let thirdQuestion = about.thirdQuestion;
+        let thirdAnswer1 = about.thirdAnswer1;
+        let thirdAnswer2 = about.thirdAnswer2;
+        let fourthQuestion = about.fourthQuestion;
+        let fourthAnswer1 = about.fourthAnswer1;
+        let fourthAnswer2 = about.fourthAnswer2;
 
         return (
             <div className="how">
@@ -39,4 +44,7 @@ class HowContainer extends Component {
     }
 }
 
+HowContainer.contextTypes = {
+    t: PropTypes.func.isRequired
+}
 export default HowContainer;

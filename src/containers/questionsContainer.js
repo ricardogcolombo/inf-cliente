@@ -1,20 +1,21 @@
 import React, {
 	Component
 } from 'react';
+
+import {PropTypes} from 'prop-types'
 import {
 	withRouter
 } from "react-router-dom";
-
+import {connect} from 'react-redux'
 
 import {
 	Input
 } from 'semantic-ui-react'
 
+
 import Dropdown from 'react-dropdown'
 import ButtonContainer from './ButtonContainer.js';
 import '../styles/Questions.css'
-
-var I18n = require('react-redux-i18n').I18n;
 
 class QuestionsContainer extends Component {
 	navTo(value) {
@@ -29,28 +30,29 @@ class QuestionsContainer extends Component {
 				label: item,
 				value: item
 			}
-		}
-		let gender = I18n.t('detailsQuestions.answers.gender').map(getArrayForDropdown);
-		let school = I18n.t('detailsQuestions.answers.school').map(getArrayForDropdown);
-		let work = I18n.t('detailsQuestions.answers.work').map(getArrayForDropdown);;
-		let health = I18n.t('detailsQuestions.answers.health').map(getArrayForDropdown);;
-		let family = I18n.t('detailsQuestions.answers.family').map(getArrayForDropdown);;
-		let rent = I18n.t('detailsQuestions.answers.rent').map(getArrayForDropdown);;
-		let basicAnswer = I18n.t('detailsQuestions.answers.basicAnswer').map(getArrayForDropdown);;
+        }
+        let detailsQuestions = this.context.t('detailsQuestions');
+		let gender = detailsQuestions.answers.gender.map(getArrayForDropdown);
+		let school = detailsQuestions.answers.school.map(getArrayForDropdown);
+		let work = detailsQuestions.answers.work.map(getArrayForDropdown);;
+		let health = detailsQuestions.answers.health.map(getArrayForDropdown);;
+		let family = detailsQuestions.answers.family.map(getArrayForDropdown);;
+		let rent = detailsQuestions.answers.rent.map(getArrayForDropdown);;
+		let basicAnswer = detailsQuestions.answers.basicAnswer.map(getArrayForDropdown);;
 
-		let descriptionsTitle = I18n.t('detailsQuestions.calculateInflation');
-		let textDescription = I18n.t('detailsQuestions.firstParagraph');
-		let getReport = I18n.t('detailsQuestions.getReport');
+		let descriptionsTitle = detailsQuestions.calculateInflation;
+		let textDescription = detailsQuestions.firstParagraph;
+		let getReport = detailsQuestions.getReport;
 
-		let questionAge = I18n.t('detailsQuestions.questions.age');
-		let questionGender = I18n.t('detailsQuestions.questions.gender');
-		let questionEducation = I18n.t('detailsQuestions.questions.lvlEducation');
-		let questionEmployee = I18n.t('detailsQuestions.questions.employee');
-		let questionFamily = I18n.t('detailsQuestions.questions.family');
-		let questionMedic = I18n.t('detailsQuestions.questions.medic');
-		let questionRent = I18n.t('detailsQuestions.questions.rent');
-		let questionCar = I18n.t('detailsQuestions.questions.rent');
-		let questionSalary = I18n.t('detailsQuestions.questions.salary');
+		let questionAge = detailsQuestions.questions.age;
+		let questionGender = detailsQuestions.questions.gender;
+		let questionEducation = detailsQuestions.questions.lvlEducation;
+		let questionEmployee = detailsQuestions.questions.employee;
+		let questionFamily = detailsQuestions.questions.family;
+		let questionMedic = detailsQuestions.questions.medic;
+		let questionRent = detailsQuestions.questions.rent;
+		let questionCar = detailsQuestions.questions.rent;
+		let questionSalary = detailsQuestions.questions.salary;
 
 		return (
 			<div className="questions">
@@ -98,6 +100,10 @@ class QuestionsContainer extends Component {
             </div>
 		)
 	}
+}
+
+QuestionsContainer.contextTypes = {
+  t: PropTypes.func.isRequired
 }
 
 export default withRouter(QuestionsContainer);

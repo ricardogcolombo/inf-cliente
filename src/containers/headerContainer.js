@@ -2,21 +2,23 @@ import React, {
     Component
 } from 'react';
 import Header from '../components/header/header';
+
 import {
-    loadTranslations,
-    setLocale,
-    syncTranslationWithStore
-} from 'react-redux-i18n';
+    PropTypes
+} from 'prop-types'
+
 import ButtonContainer from './ButtonContainer.js';
 import '../styles/Header.css';
-import i18n from '../locales/i18n';
 import store from '../store';
 
 import {
     withRouter
 } from "react-router-dom";
 
-const I18n = require('react-redux-i18n').I18n;
+import {
+    setLanguage,
+    setTranslations
+} from 'redux-i18n'
 
 class HeaderContainer extends Component {
 
@@ -30,8 +32,8 @@ class HeaderContainer extends Component {
     navToHome() {
         this.navTo('/');
     }
-    onChangeLanguage() {
-        store.dispatch(setLocale('es'));
+    onChangeLanguage(lang) {
+        store.dispatch(setLanguage(lang.value));
     }
     handleSelect(info) {
         this.navTo(info.item.props.Key)
@@ -41,15 +43,21 @@ class HeaderContainer extends Component {
         this.navTo(button.props.Key)
     }
     render() {
-        let faq = I18n.t('navItems.faq');
-        let login = I18n.t('navItems.login');
+        let faq = this.context.t('nav').faq;
+        let login = this.context.t('nav').login;
         let getArrayForDropdown = function(item) {
             return {
-                label: item,
-                value: item
+                label: item.value,
+                value: item.key
             }
         }
-        let languages = ['ESPAÑOL', 'ENGLISH'].map(getArrayForDropdown);
+        let languages = [{
+            value: 'Español',
+            key: 'es'
+        }, {
+            value: 'English',
+            key: 'en'
+        }].map(getArrayForDropdown);
 
         let items = [
             <ButtonContainer buttonClassName='navItem Button' Key='faq' key='faq' buttonText={faq} onClickEvent={this.onButtonPress.bind(this)}/>,
@@ -63,5 +71,7 @@ class HeaderContainer extends Component {
         )
     }
 }
-
+HeaderContainer.contextTypes = {
+    t: PropTypes.func.isRequired
+}
 export default withRouter(HeaderContainer);

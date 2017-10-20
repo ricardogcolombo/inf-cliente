@@ -2,6 +2,10 @@ import React, {
     Component
 } from 'react';
 import ButtonContainer from './ButtonContainer.js';
+
+import {
+    PropTypes
+} from 'prop-types'
 import {
     withRouter
 } from "react-router-dom";
@@ -13,9 +17,6 @@ import {
 import {
     FacebookLogin
 } from 'react-facebook-login-component';
-
-
-const I18n = require('react-redux-i18n').I18n;
 
 class LoginContainer extends Component {
     navTo(value) {
@@ -40,7 +41,7 @@ class LoginContainer extends Component {
         this.navTo('/details');
     }
     render() {
-        let loginText = I18n.t('login.loginTitle');
+        let loginText = this.context.t('login').loginTitle;
 
         return (
             <div className="login">
@@ -76,4 +77,7 @@ class LoginContainer extends Component {
     }
 }
 
+LoginContainer.contextTypes = {
+    t: PropTypes.func.isRequired
+}
 export default withRouter(LoginContainer);

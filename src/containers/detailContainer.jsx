@@ -3,6 +3,9 @@ import React, {
 } from 'react';
 
 import {
+    PropTypes
+} from 'prop-types'
+import {
     connect
 } from 'react-redux';
 import 'rc-slider/assets/index.css';
@@ -20,7 +23,6 @@ import {
 import {
     getMetricasSuccess
 } from '../actions/metricas-actions';
-var I18n = require('react-redux-i18n').I18n;
 
 const initialState = {
     metricas: [],
@@ -87,15 +89,17 @@ class Detailcontainer extends Component {
         store.dispatch(getMetricasSuccess(this.state.metricas))
     }
     render() {
-        let Food = I18n.t('categories.Food');
-        let Clothes = I18n.t('categories.Clothes');
-        let House = I18n.t('categories.House');
-        let Home = I18n.t('categories.Home');
-        let Health = I18n.t('categories.Health');
-        let Transport = I18n.t('categories.Transport');
-        let Entretainament = I18n.t('categories.Entretainament');
-        let Education = I18n.t('categories.Education');
-        let Other = I18n.t('categories.Other');
+        let categories = this.context.t('categories');
+
+        let Food = categories.Food;
+        let Clothes = categories.Clothes;
+        let House = categories.House;
+        let Home = categories.Home;
+        let Health = categories.Health;
+        let Transport = categories.Transport;
+        let Entretainament = categories.Entretainament;
+        let Education = categories.Education;
+        let Other = categories.Other;
 
         function percentFormatter(v) {
             return `${v} %`;
@@ -163,10 +167,14 @@ class Detailcontainer extends Component {
 }
 
 const mapStateToProps = function(state, ownProps) {
-
     return {
         metricas: state.metricas
 
     };
 }
+
+Detailcontainer.contextTypes = {
+    t: PropTypes.func.isRequired
+}
+
 export default connect(mapStateToProps)(Detailcontainer);

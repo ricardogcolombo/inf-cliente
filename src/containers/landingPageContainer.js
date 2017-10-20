@@ -12,8 +12,6 @@ import HowContainer from './howContainer';
 import IntentContainer from './whyContainer';
 import Footer from './footerContainer';
 
-var I18n = require('react-redux-i18n').I18n;
-
 class AboutContainer extends Component {
 
     
