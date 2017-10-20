@@ -18,10 +18,5 @@ class App extends Component {
         );
     }
 }
-const mapStateToProps = function(state, ownProps) {
-    return {
-        lang: state.i18nState.lang,
-        translations: state.i18nState.translations
-    };
-}
-export default connect(mapStateToProps)(App);
+
+export default App;
