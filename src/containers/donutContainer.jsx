@@ -74,7 +74,7 @@ class DonutContainer extends Component {
   render() {
 
     // https://github.com/digidem/react-dimensions
-    let width = 640,
+    let width = 740,
       height = 400,
       radius = Math.min(width, height) / 2;
     // This sets the radius of the pie chart to fit within
@@ -83,11 +83,13 @@ class DonutContainer extends Component {
     let x = width / 2;
     let data = this.state.metricas.categories;
     let y = height / 2 + 90;
+
     let innerRadius = radius * .35;
     let outerRadius = radius;
-    let labelRadius = radius * .5;
-    let padAngle = .01;
-    let cornerRadius = 7;
+    let labelRadius = radius * 1.05;
+    let cornerRadius = 2;
+
+    let padAngle = 0;
 
     const pie = d3.pie();
 
@@ -103,17 +105,20 @@ class DonutContainer extends Component {
 
     return <div className='donutchart'>
             <svg width="100%" height="600px">
+
             <Pie x={x} y={y}
-             radius={radius}
-             outerArc={outerArc}
-             arc={arc}
-             pie={pie}
-             innerRadius={innerRadius}
-             outerRadius={outerRadius}
-             labelRadius={labelRadius}
-             cornerRadius={cornerRadius}
-             padAngle={padAngle}
-             data={data} />
+                  radius={radius}
+                  outerArc={outerArc}
+                  arc={arc}
+                  pie={pie}
+                  innerRadius={innerRadius}
+                  outerRadius={outerRadius}
+                  labelRadius={labelRadius}
+                  cornerRadius={cornerRadius}
+                  padAngle={padAngle}
+                  data={data}
+              />
+
              </svg>
             </div>
   }

@@ -150,7 +150,7 @@ class Detailcontainer extends Component {
               </div>
 
 
-            <Footer className='footerDetails'/>
+          {/*<Footer className='footerDetails'/> */}
           </div>
         )
     }

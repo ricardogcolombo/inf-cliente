@@ -13,7 +13,9 @@ class Label extends Component {
 
     let {
       outerArc,
+      arc,
       value,
+      label,
       radius,
     } = this.props;
 
@@ -24,15 +26,23 @@ class Label extends Component {
     linePos[0] = radius * 0.95 * (this.midAngle(value) < Math.PI ? 1 : -1);
 
     const textAnchor = this.midAngle(value) < Math.PI ? 'start' : 'end';
-
+    let classes = 'labelsForChart '+label;
     return (
       <g>
+        <polyline
+          opacity={.4}
+          strokeWidth={2}
+          stroke={'#000'}
+          fill={'none'}
+          points={[arc.centroid(value), outerArc.centroid(value), linePos]}
+        />
       < text
+        class={label}
         dy = '.35em'
-        x={labelPos[0]}
-        y={labelPos[1]}
-        className = 'labelsForChart' >
-      { value.data.displayName }
+        transform={`translate(${labelPos[0]}, ${labelPos[1]})`}
+        textAnchor={textAnchor}
+        className = {classes} >
+      {label}
       < /text>
 
       </g>

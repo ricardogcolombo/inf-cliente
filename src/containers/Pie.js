@@ -15,15 +15,19 @@ class Pie extends Component {
     this.renderLabel = this.renderLabel.bind(this);
   }
 
-  renderLabel(value, i) {
+  renderLabel(value, i ) {
     let {
       radius,
-      outerArc
+      arc,
+      outerArc,
+      data
     } = this.props;
 
     return <Label key={i}
             outerArc={outerArc}
              value={value}
+             label = {data[i].displayName}
+             arc={arc}
              radius={radius}
              />
   }
@@ -45,31 +49,21 @@ class Pie extends Component {
     let {
       x,
       y,
-      innerRadius,
-      outerRadius,
-      cornerRadius,
-      padAngle,
-      labelRadius,
-      outerArc,
-      arc,
       pie,
       data
     } = this.props;
+
     // https://github.com/d3/d3/wiki/Pie-Layout
     return (
       <g>
             <g className='slices' transform={`translate(${x}, ${y})`}>
-        {/* Render a slice for each data point */}
-            {pie(data.map(function(d){
-                return d.score;
-            })).map(this.renderSlice)}
+            {/* Render a slice for each data point */}
+            {pie(data.map(d =>d.score )).map(this.renderSlice)}
             </g>
 
-            <g className='labels' >
-        {/* Render a slice for each data point */}
-            {pie(data.map(function(d){
-                return d;
-            })).map(this.renderLabel)}
+            <g className='labels' transform={`translate(${x}, ${y})`}>
+            {/* Render a slice for each data point */}
+            {pie(data.map(d => d.score)).map(this.renderLabel)}
             </g>
 
             </g>
