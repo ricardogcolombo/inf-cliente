@@ -1,72 +1,63 @@
 import React, {
-    Component
+  Component
 } from 'react';
-
 import * as d3 from "d3";
+
 import Slice from './Slice';
 import Label from './LabelsForCharts';
 
 class Pie extends Component {
-    constructor(props) {
-        super(props);
-        // https://github.com/d3/d3/wiki/Ordinal-Scales#category10
-        this.colorScale = d3.scaleOrdinal(d3.schemeCategory10);
-        this.renderSlice = this.renderSlice.bind(this);
-        this.renderLabel = this.renderLabel.bind(this);
-    }
+  constructor(props) {
+    super(props);
+    // https://github.com/d3/d3/wiki/Ordinal-Scales#category10
+    this.colorScale = d3.scaleOrdinal(d3.schemeCategory10);
+    this.renderSlice = this.renderSlice.bind(this);
+    this.renderLabel = this.renderLabel.bind(this);
+  }
 
-    renderLabel(value, i) {
-        let {
-            innerRadius,
-            radius,
-            outerRadius,
-            cornerRadius,
-            padAngle
-        } = this.props;
+  renderLabel(value, i) {
+    let {
+      radius,
+      outerArc
+    } = this.props;
 
-        return <Label key={i}
-            innerRadius={innerRadius}
-            outerRadius={outerRadius}
-            cornerRadius={cornerRadius}
-             padAngle={padAngle}
+    return <Label key={i}
+            outerArc={outerArc}
              value={value}
              radius={radius}
-             label={value} />
-    }
+             />
+  }
 
-    renderSlice(value, i) {
-        // We'll create this component in a minute
-        let {
-            innerRadius,
-            radius,
-            outerRadius,
-            cornerRadius,
-            padAngle
-        } = this.props;
-        return (
-            <Slice key={i}
-             innerRadius={innerRadius}
-             outerRadius={outerRadius}
-             cornerRadius={cornerRadius}
-             padAngle={padAngle}
+  renderSlice(value, i) {
+    // We'll create this component in a minute
+    let {
+      arc
+    } = this.props;
+    return (
+      <Slice key={i}
+             arc={arc}
              value={value}
-             radius={radius}
-             label={value}
              fill={this.colorScale(i)} />
-        );
-    }
+    );
+  }
 
-    render() {
-        let {
-            x,
-            y,
-            data
-        } = this.props;
-        // https://github.com/d3/d3/wiki/Pie-Layout
-        let pie = d3.pie();
-
-        return (
-            <g>
+  render() {
+    let {
+      x,
+      y,
+      innerRadius,
+      outerRadius,
+      cornerRadius,
+      padAngle,
+      labelRadius,
+      outerArc,
+      arc,
+      pie,
+      data
+    } = this.props;
+    // https://github.com/d3/d3/wiki/Pie-Layout
+    return (
+      <g>
             <g className='slices' transform={`translate(${x}, ${y})`}>
         {/* Render a slice for each data point */}
             {pie(data.map(function(d){
@@ -74,7 +65,7 @@ class Pie extends Component {
             })).map(this.renderSlice)}
             </g>
 
-            <g className='labels' transform={`translate(${x}, ${y})`}>
+            <g className='labels' >
         {/* Render a slice for each data point */}
             {pie(data.map(function(d){
                 return d;
@@ -82,7 +73,7 @@ class Pie extends Component {
             </g>
 
             </g>
-        );
-    }
+    );
+  }
 }
 export default Pie;
