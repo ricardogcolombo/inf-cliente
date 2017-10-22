@@ -156,7 +156,7 @@ class Detailcontainer extends Component {
           </div>
               </div>
               <div className='charts'>
-                  <DonutContainer  data={[5,10,1,3]} size={[500,500]} />
+                  <DonutContainer size={[500,500]} />
               </div>
 
 
