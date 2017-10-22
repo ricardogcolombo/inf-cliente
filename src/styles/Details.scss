@@ -1,6 +1,7 @@
 @import "colors.scss";
 @import "fonts.scss";
 @import "commons.scss";
+
 .iconChartPos {
   position: absolute;
   top: -5px;
@@ -20,7 +21,8 @@
     width: 500px;
     height: 700px;
     display: inline-block;
-    box-shadow:3px 0 4px #888888;
+    box-shadow: 3px 0 4px #888888;
+
     .category {
       margin-top: 20px;
       padding-left: 30px;
@@ -97,6 +99,29 @@
     min-height: 500px;
     min-width: 600px;
 
+    .tabsButtonList {
+      display: flex;
+
+      .tabButton {
+        text-align: center;
+        margin-right:3px;
+        bottom: 0;
+        padding: 10px;
+        width: 200px;
+        height: 40px;
+        list-style: none;
+        border-bottom: 1px solid $grey1;
+
+        &.react-tabs__tab--selected {
+          border-bottom: 1px solid $blue2;
+        }
+      }
+    }
+
+    .labelsForChart{
+      font-size:19px;
+      fill:$grey1;
+    }
     .donutchart {
       min-height: 500px;
     }

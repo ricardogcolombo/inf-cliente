@@ -1,7 +1,6 @@
 import React, {
   Component
 } from 'react';
-
 import {
   PropTypes
 } from 'prop-types'
@@ -11,10 +10,15 @@ import {
 import 'rc-slider/assets/index.css';
 import '../styles/Details.css';
 import store from '../store';
-
 import Slider from 'rc-slider';
 import Footer from './footerContainer.js';
 import DonutContainer from './donutContainer';
+import {
+  Tab,
+  Tabs,
+  TabList,
+  TabPanel
+} from 'react-tabs';
 
 import {
   getMetricas
@@ -156,9 +160,20 @@ class Detailcontainer extends Component {
           </div>
               </div>
               <div className='charts'>
-                  <DonutContainer size={[500,500]} />
-              </div>
+          <Tabs>
+            <TabList className='tabsButtonList'>
+              <Tab className="tabButton">Consumos</Tab>
+              <Tab className="tabButton">Title 2</Tab>
+            </TabList>
 
+            <TabPanel>
+              <DonutContainer size={[500,500]} />
+            </TabPanel>
+            <TabPanel>
+              <h2>Any content 2</h2>
+            </TabPanel>
+          </Tabs>
+              </div>
 
           <Footer className='footerDetails'/>
           </div>

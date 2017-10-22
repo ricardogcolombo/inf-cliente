@@ -80,7 +80,7 @@ class DonutContainer extends Component {
     // This sets the radius of the pie chart to fit within
     // the current window size, with some additional padding
     // Centers the pie chart
-    let x = width / 2;
+    let x = width / 2-40;
     let data = this.state.metricas.categories;
     let y = height / 2 + 90;
 

@@ -29,11 +29,11 @@ class Label extends Component {
     linePos[0] = radius * 0.95 * (this.midAngle(value) < Math.PI ? 1 : -1);
 
     const textAnchor = this.midAngle(value) < Math.PI ? 'start' : 'end';
-    let classes = 'labelsForChart icon-home ' + label;
+    let classes = 'labelsForChart';
 
 
-    let translatePosX = labelPos[0] < 0 ? labelPos[0] - 10 : labelPos[0] + 30;
-    let translatePosY = labelPos[1] - 10;
+    let translatePosX = labelPos[0] < 0 ? labelPos[0] - 0 : labelPos[0] + 30;
+    let translatePosY = labelPos[1] - 13;
     return (
       <g>
         <polyline
