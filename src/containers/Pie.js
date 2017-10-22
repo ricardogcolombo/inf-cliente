@@ -26,7 +26,7 @@ class Pie extends Component {
     return <Label key={i}
             outerArc={outerArc}
              value={value}
-             label = {data[i].displayName}
+             label = {data[i].name}
              arc={arc}
              radius={radius}
              />

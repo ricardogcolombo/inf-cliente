@@ -11,25 +11,25 @@ import Pie from './Pie';
 const initialState = {
   metricas: {
     categories: [{
-      "displayName": "home",
-      "name": "home",
+      "displayName": "Home",
+      "name": "Home",
       "score": 10
     }, {
-      "displayName": "clothes",
-      "name": "clothes",
+      "displayName": "Clothes",
+      "name": "Clothes",
       "score": 11.25
     }, {
-      "displayName": "food",
-      "name": "food",
+      "displayName": "Food",
+      "name": "Food",
       "score": 11.25
     }, {
-      "displayName": "health",
-      "name": "health",
+      "displayName": "Health",
+      "name": "Health",
       "score": 11.25
     }, {
 
-      "displayName": "house",
-      "name": "house",
+      "displayName": "House",
+      "name": "House",
       "score": 11.25
     }, {
 
@@ -48,8 +48,8 @@ const initialState = {
       "score": 11.25
     }, {
 
-      "displayName": "transport",
-      "name": "transport",
+      "displayName": "Transport",
+      "name": "Transport",
       "score": 11.25
     }]
   }

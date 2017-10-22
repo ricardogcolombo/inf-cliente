@@ -2,12 +2,17 @@ import React, {
   Component
 } from 'react';
 
+import IconSvg from './IconChart.jsx'
+
 import * as d3 from "d3";
 
 class Label extends Component {
 
   midAngle(d) {
     return d.startAngle + (d.endAngle - d.startAngle) / 2;
+  }
+  formatValue(){
+    return this.props.value.data.toString()+"%";
   }
   render() {
 
@@ -26,7 +31,11 @@ class Label extends Component {
     linePos[0] = radius * 0.95 * (this.midAngle(value) < Math.PI ? 1 : -1);
 
     const textAnchor = this.midAngle(value) < Math.PI ? 'start' : 'end';
-    let classes = 'labelsForChart '+label;
+    let classes = 'labelsForChart icon-home '+label ;
+
+
+    let translatePosX = labelPos[0]<0?labelPos[0]-10:labelPos[0]+30;
+    let translatePosY = labelPos[1]-10;
     return (
       <g>
         <polyline
@@ -37,14 +46,13 @@ class Label extends Component {
           points={[arc.centroid(value), outerArc.centroid(value), linePos]}
         />
       < text
-        class={label}
         dy = '.35em'
         transform={`translate(${labelPos[0]}, ${labelPos[1]})`}
         textAnchor={textAnchor}
-        className = {classes} >
-      {label}
+      className = {classes} >
+      {this.formatValue()}
       < /text>
-
+        <IconSvg iconName={label} translatePosX = {translatePosX} translatePosY={translatePosY}/>
       </g>
     );
   }

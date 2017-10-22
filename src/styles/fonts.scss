@@ -18,7 +18,8 @@ $fontsPath: "../fonts";
     src: url('#{$fontsPath}/icomoon.eot');
     src: url('#{$fontsPath}/icomoon.eot?#iefix') format('embedded-opentype'),
     url('#{$fontsPath}/icomoon.woff') format('woff'),
-    url('#{$fontsPath}/icomoon.ttf') format('truetype');
+    url('#{$fontsPath}/icomoon.ttf') format('truetype'),
+    url('#{$fontsPath}/icomoon.svg#Iconmoon') format('svg');
     font-weight: 400;
     font-style: normal;
 }
