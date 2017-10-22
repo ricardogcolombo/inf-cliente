@@ -6,7 +6,7 @@ import * as d3 from "d3";
 import {
   connect
 } from 'react-redux';
-import Pie from './Pie';
+import Pie from './pieContainer';
 
 const initialState = {
   metricas: {

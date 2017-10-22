@@ -2,8 +2,6 @@ import React, {
   Component
 } from 'react';
 
-import * as d3 from "d3";
-
 const icons = {
   "home": "M1024 369.556l-512 397.426-512-397.428v162.038l512 397.426 512-397.428zM896 384v-384h-256v256h-256v-256h-256v384l384 288z",
   "home3": "M1024 352l-192 192v288h-128v-160l-192 192-512-512v-32h128v-320h320v192h128v-192h320v320h128z",
