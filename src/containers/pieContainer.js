@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 import * as d3 from "d3";
 
-import Slice from './sliceContainer';
+import Slice from '../components/Slice/slice.js';
 import Label from './labelsChartContainer';
 
 class Pie extends Component {
