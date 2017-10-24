@@ -6,9 +6,13 @@ import Header from '../components/header/header';
 import {
     PropTypes
 } from 'prop-types'
-
-import ButtonContainer from './ButtonContainer.js';
+// styles
 import '../styles/Header.css';
+
+// containers
+import ButtonContainer from './Button.container';
+
+// store and api functions
 import store from '../store';
 
 import {

@@ -8,13 +8,13 @@ import {
 } from 'react-scroll-parallax';
 import '../styles/landingPage.css'
 
-import HowContainer from './howContainer';
-import IntentContainer from './whyContainer';
-import Footer from './footerContainer';
+import HowContainer from './how.container';
+import IntentContainer from './why.container';
+import Footer from './footer.container';
 
 class AboutContainer extends Component {
 
-    
+
     render() {
         const Scroll = () => (
             <div className="scroll">
@@ -112,10 +112,10 @@ class AboutContainer extends Component {
                             'fontSize':'162px'
 
                     }}>
-                    {letter.forms.map((X, i) => 
+                    {letter.forms.map((X, i) =>
                         <Parallax
                         className="form"
-                        key={i}                        
+                        key={i}
                         offsetYMin={-offset * (i + 1) + 'px'}
                         offsetYMax={offset * (i + 1) + 'px'}
                         slowerScrollRate={isSlower}
@@ -161,7 +161,7 @@ class AboutContainer extends Component {
         );
         const ParallaxWord = () => (
             <div className="word">
-                {word.map((X, i) => 
+                {word.map((X, i) =>
                     <Letter key={i} letter={X} />
                 )}
             </div>

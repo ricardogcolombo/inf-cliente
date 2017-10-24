@@ -1,0 +1,90 @@
+@import "colors.scss";
+@import "fonts.scss";
+@import "commons.scss";
+
+.iconChartPos {
+  position: absolute;
+  top: -5px;
+  left: -30px;
+  color: $grey1;
+  font-size: 20px;
+}
+
+.sliders {
+    float: left;
+    padding: 20px;
+    width: 30%;
+    height: 700px;
+    display: inline-block;
+    box-shadow: 3px 0 4px #888888;
+
+    .category {
+        margin-top: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        .icon {
+            font-family: "Icomoon";
+
+            &.Food:before {
+                content: '\e9a3';
+
+                @extend .iconChartPos;
+            }
+
+            &.Clothes:before {
+                @extend .iconChartPos;
+
+                content: '\e976';
+            }
+
+            &.Health:before {
+                @extend .iconChartPos;
+
+                content: '\e998';
+            }
+
+            &.House:before {
+                content: '\e900';
+
+                @extend .iconChartPos;
+            }
+
+            &.Home:before {
+                content: '\e95b';
+
+                @extend .iconChartPos;
+            }
+
+            &.Transport:before {
+                content: '\e9af';
+
+                @extend .iconChartPos;
+            }
+
+            &.Entretainament:before {
+                content: '\e9e9';
+
+                @extend .iconChartPos;
+            }
+
+            &.Education:before {
+                content: '\e91f';
+
+                @extend .iconChartPos;
+            }
+
+            &.Other:before {
+                content: '\e93a';
+
+                @extend .iconChartPos;
+            }
+        }
+
+        .rc-slider-handle {
+            margin-top: -7px;
+            width: 18px;
+            height: 18px;
+        }
+    }
+}

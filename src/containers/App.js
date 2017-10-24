@@ -1,12 +1,17 @@
 import React, {
     Component
 } from 'react';
-import '../styles/App.css';
-import HeaderContainer from './headerContainer';
-import MainContainer from './mainContainer';
 import {
     connect
 } from 'react-redux'
+
+// styles
+import '../styles/App.css';
+// store and api functions
+
+// containers
+import HeaderContainer from './header.container';
+import MainContainer from './main.container';
 
 class App extends Component {
     render() {

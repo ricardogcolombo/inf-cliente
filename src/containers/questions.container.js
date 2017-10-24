@@ -13,7 +13,7 @@ import {
 
 
 import Dropdown from 'react-dropdown'
-import ButtonContainer from './ButtonContainer.js';
+import ButtonContainer from './Button.container';
 import '../styles/Questions.css'
 
 class QuestionsContainer extends Component {

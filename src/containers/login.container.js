@@ -1,7 +1,7 @@
 import React, {
     Component
 } from 'react';
-import ButtonContainer from './ButtonContainer.js';
+import ButtonContainer from './Button.container';
 
 import {
     PropTypes

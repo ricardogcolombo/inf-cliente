@@ -5,15 +5,16 @@ import React, {
 import {
   PropTypes
 } from 'prop-types'
-
 import {
   connect
 } from 'react-redux';
-
+// styles
+import '../styles/sliders.css';
 import 'rc-slider/assets/index.css';
-import Slider from 'rc-slider';
 
+// store and api functions
 import store from '../store';
+
 import {
   getMetricas
 } from '../api/metricas';
@@ -21,6 +22,13 @@ import {
 import {
   getMetricasSuccess
 } from '../actions/metricas-actions';
+
+// containers
+import Button from './Button.container'
+
+// 3rd party
+import Slider from 'rc-slider';
+
 const initialState = {
   metricas: [],
   food: 0,
@@ -149,8 +157,9 @@ class SliderContainer extends Component {
           <div className='categoryName'>{Other}
                 <Slider className='icon Other' onAfterChange={this.changeData} onChange={this.onSliderChange.bind(this,'other')} value={this.state.other} />
               </div>
-          </div>
-          </div>
+        </div>
+        <Button className='buttonSaveSliders'/>
+      </div>
     );
   }
 }

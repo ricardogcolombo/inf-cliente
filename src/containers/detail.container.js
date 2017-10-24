@@ -10,13 +10,18 @@ import {
     connect
 } from 'react-redux';
 
+// styles
 import '../styles/Details.css';
 
-import SliderContainer from "./sliderContainer";
+// store
 import store from '../store';
-import Footer from './footerContainer.js';
-import DonutContainer from './donutContainer';
 
+// containers
+import SliderContainer from "./slider.container";
+import Footer from './footer.container';
+import DonutContainer from './donut.container';
+
+// 3rd party controls
 import {
     Tab,
     Tabs,

@@ -2,7 +2,7 @@ import React, {
   Component
 } from 'react';
 
-import IconSvg from './IconChart'
+import IconSvg from './IconChart.container'
 
 class Label extends Component {
 

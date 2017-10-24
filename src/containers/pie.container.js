@@ -1,10 +1,13 @@
 import React, {
   Component
 } from 'react';
-import * as d3 from "d3";
 
-import Slice from '../components/Slice/slice.js';
-import Label from './labelsChartContainer';
+// containers
+import Slice from '../components/Slice/slice';
+import Label from './labelsChart.container';
+
+// 3rd party
+import * as d3 from "d3";
 
 class Pie extends Component {
   constructor(props) {

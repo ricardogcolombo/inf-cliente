@@ -7,11 +7,11 @@ import {
   Route
 } from 'react-router-dom'
 
-import landingPage from './landingPageContainer';
-import QuestionsContainer from './questionsContainer';
-import LoginContainer from './loginContainer';
-import FaqContainer from './faqContainer';
-import DetailContainer from './detailContainer';
+import landingPage from './landingPage.container';
+import QuestionsContainer from './questions.container';
+import LoginContainer from './login.container';
+import FaqContainer from './faq.container';
+import DetailContainer from './detail.container';
 
 import '../styles/main.css';
 class MainContainer extends Component {
