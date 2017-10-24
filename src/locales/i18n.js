@@ -1,6 +1,5 @@
 export const translations = {
     "en": {
-
         'Hello world!': '¡Hello mundo!',
         "nav": {
             "about": {
@@ -11,7 +10,9 @@ export const translations = {
                 "intent": "Intent"
             },
             "faq": "Frequent questions",
-            "login": "login/Sign up"
+            "login": "login/Sign up",
+            "evolution":"Evolution",
+            "consume":"Consume"
         },
         "about": {
             "what": {
@@ -126,7 +127,9 @@ export const translations = {
                 "intent": "Para qué sirve conocer"
             },
             "faq": "Preguntas frecuentes",
-            "login": "Ingresa/Registrate"
+            "login": "Ingresa/Registrate",
+            "evolution":"Evolucion",
+            "consume":"Consumos"
         },
         "about": {
             "what": {

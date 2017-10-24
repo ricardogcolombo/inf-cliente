@@ -2,6 +2,13 @@ import React, {
     Component
 } from 'react';
 
+import {
+    PropTypes
+} from 'prop-types'
+
+import {
+    connect
+} from 'react-redux';
 // containers
 import DonutContainer from './donut.container';
 // 3rd party controls
@@ -14,14 +21,19 @@ import {
 
 class TabContainer extends Component {
     render() {
+
+        let nav = this.context.t('nav');
+        let evolution = nav.evolution;
+        let consume = nav.consume;
+
         return (
             <div className='tabContainer'>
 
       <div className='charts'>
       <Tabs>
       <TabList className='tabsButtonList'>
-      <Tab className="tabButton">Consumos</Tab>
-      <Tab className="tabButton">Title 2</Tab>
+      <Tab className="tabButton">{consume}</Tab>
+      <Tab className="tabButton">{evolution}</Tab>
       </TabList>
 
       <TabPanel>
@@ -37,4 +49,15 @@ class TabContainer extends Component {
     }
 }
 
-export default TabContainer;
+const mapStateToProps = function(state, ownProps) {
+    return {
+        metricas: state.metricas
+
+    };
+}
+
+TabContainer.contextTypes = {
+    t: PropTypes.func.isRequired
+}
+
+export default connect(mapStateToProps)(TabContainer);
