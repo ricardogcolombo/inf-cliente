@@ -74,7 +74,7 @@ class DonutContainer extends Component {
   render() {
 
     // https://github.com/digidem/react-dimensions
-    let width = 740,
+    let width = 800,
       height = 400,
       radius = Math.min(width, height) / 2;
     // This sets the radius of the pie chart to fit within
