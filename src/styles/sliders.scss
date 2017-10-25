@@ -3,11 +3,11 @@
 @import "commons.scss";
 
 .iconChartPos {
-  position: absolute;
-  top: -5px;
-  left: -30px;
-  color: $grey1;
-  font-size: 20px;
+    position: absolute;
+    top: -5px;
+    left: -30px;
+    color: $grey1;
+    font-size: 20px;
 }
 
 .sliders {
@@ -85,6 +85,43 @@
             margin-top: -7px;
             width: 18px;
             height: 18px;
+        }
+    }
+
+    .DateContainer {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .dateInputLabel {
+            width: 100px;
+            margin-right:10px;
+        }
+
+        > div {
+            display: inline;
+        }
+
+        input {
+            font-size: 17px;
+            width: 80px;
+            text-align: center;
+            border: none;
+            border-bottom: 1px solid $blue1;
+        }
+    }
+
+    .buttonFooter {
+        text-align: center;
+        padding-top: 30px;
+
+        .buttonSaveSlider {
+            width: 14em;
+            height: 3em;
+            background-color: $blue1;
+            text-transform: uppercase;
+            color: white;
+            border: none;
         }
     }
 }

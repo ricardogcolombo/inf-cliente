@@ -27,7 +27,7 @@ class Detailcontainer extends Component {
             <div className="detail">
             <SliderContainer />
             <TabContainer/ >
-            <Footer className='footerDetails'/>
+            {/**          <Footer className='footerDetails'/>*/}
             </div>
         )
     }

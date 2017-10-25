@@ -1,6 +1,8 @@
 export const translations = {
     "en": {
-        'Hello world!': '¡Hello mundo!',
+        'button':{
+            'save':'Save'
+        },
         "nav": {
             "about": {
                 "aboutTitle": "About Conocer",
@@ -117,7 +119,9 @@ export const translations = {
         }
     },
     "es": {
-        'Hello world!': '¡Hola mundo!',
+        'button':{
+            'save':'Guardar'
+        },
         "nav": {
             "about": {
                 "aboutTitle": "Sobre Conocer",

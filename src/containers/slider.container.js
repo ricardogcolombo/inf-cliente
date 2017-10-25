@@ -1,26 +1,27 @@
 import React, {
-  Component
+    Component
 } from 'react';
 
 import {
-  PropTypes
+    PropTypes
 } from 'prop-types'
 import {
-  connect
+    connect
 } from 'react-redux';
 // styles
 import '../styles/sliders.css';
 import 'rc-slider/assets/index.css';
+import 'react-month-picker-input/dist/react-month-picker-input.css';
 
 // store and api functions
 import store from '../store';
 
 import {
-  getMetricas
+    getMetricas
 } from '../api/metricas';
 
 import {
-  getMetricasSuccess
+    getMetricasSuccess
 } from '../actions/metricas-actions';
 
 // containers
@@ -28,91 +29,108 @@ import Button from './Button.container'
 
 // 3rd party
 import Slider from 'rc-slider';
+import MonthPickerInput from 'react-month-picker-input'
 
 const initialState = {
-  metricas: [],
-  food: 0,
-  clothes: 0,
-  house: 0,
-  home: 0,
-  health: 0,
-  education: 0,
-  entretainament: 0,
-  other: 0,
-  transport: 0
+    metricas: [],
+    food: 0,
+    clothes: 0,
+    house: 0,
+    home: 0,
+    health: 0,
+    education: 0,
+    entretainament: 0,
+    other: 0,
+    transport: 0
 };
 
 class SliderContainer extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      metricas: null
-    }
-  }
-
-  componentDidMount() {
-    this.state = initialState;
-    getMetricas();
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.metricas) {
-      let metricas = nextProps.metricas;
-      this.state.other
-      this.setState({
-        metricas: metricas,
-        food: this.getValueForCategory(metricas, 'food'),
-        clothes: this.getValueForCategory(metricas, 'clothes'),
-        house: this.getValueForCategory(metricas, 'house'),
-        home: this.getValueForCategory(metricas, 'home'),
-        health: this.getValueForCategory(metricas, 'health'),
-        education: this.getValueForCategory(metricas, 'education'),
-        entretainament: this.getValueForCategory(metricas, 'entretainament'),
-        other: this.getValueForCategory(metricas, 'other'),
-        transport: this.getValueForCategory(metricas, 'transport')
-
-      })
-    }
-  }
-  getValueForCategory(metricas, name) {
-    let value = 0;
-    if (metricas) {
-      let filtered = metricas.categories.filter(item => item.name.toUpperCase() === name.toUpperCase())
-      value = parseInt(filtered[0].score, 10);
-    }
-    return value;
-  }
-  onSliderChange = (category, value) => {
-    let state = this.state;
-    state[category] = value
-    state.metricas.categories.forEach((item) => {
-      if (item.name === category) {
-        item.score = value;
-      }
-    });
-    store.dispatch(getMetricasSuccess(this.state.metricas))
-  }
-  render() {
-    let categories = this.context.t('categories');
-
-    let Food = categories.Food;
-    let Clothes = categories.Clothes;
-    let House = categories.House;
-    let Home = categories.Home;
-    let Health = categories.Health;
-    let Transport = categories.Transport;
-    let Entretainament = categories.Entretainament;
-    let Education = categories.Education;
-    let Other = categories.Other;
-
-    function percentFormatter(v) {
-      return `${v} %`;
+    constructor(props) {
+        super(props);
+        this.state = {
+            metricas: null
+        }
     }
 
-    return (
+    componentDidMount() {
+        this.state = initialState;
+        getMetricas();
+    }
 
-      <div className='sliders'>
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.metricas) {
+            let metricas = nextProps.metricas;
+            this.state.other
+            this.setState({
+                metricas: metricas,
+                food: this.getValueForCategory(metricas, 'food'),
+                clothes: this.getValueForCategory(metricas, 'clothes'),
+                house: this.getValueForCategory(metricas, 'house'),
+                home: this.getValueForCategory(metricas, 'home'),
+                health: this.getValueForCategory(metricas, 'health'),
+                education: this.getValueForCategory(metricas, 'education'),
+                entretainament: this.getValueForCategory(metricas, 'entretainament'),
+                other: this.getValueForCategory(metricas, 'other'),
+                transport: this.getValueForCategory(metricas, 'transport')
+
+            })
+        }
+    }
+    getValueForCategory(metricas, name) {
+        let value = 0;
+        if (metricas) {
+            let filtered = metricas.categories.filter(item => item.name.toUpperCase() === name.toUpperCase())
+            value = parseInt(filtered[0].score, 10);
+        }
+        return value;
+    }
+    onSliderChange = (category, value) => {
+        let state = this.state;
+        state[category] = value
+        state.metricas.categories.forEach((item) => {
+            if (item.name === category) {
+                item.score = value;
+            }
+        });
+        store.dispatch(getMetricasSuccess(this.state.metricas))
+    }
+    saveData(){
+        console.log("Save Parameters");
+    }
+    render() {
+        let categories = this.context.t('categories');
+
+        let Food = categories.Food;
+        let Clothes = categories.Clothes;
+        let House = categories.House;
+        let Home = categories.Home;
+        let Health = categories.Health;
+        let Transport = categories.Transport;
+        let Entretainament = categories.Entretainament;
+        let Education = categories.Education;
+        let Other = categories.Other;
+        let save = this.context.t('button').save;
+
+        function percentFormatter(v) {
+            return `${v} %`;
+        }
+        let date = new Date();
+        return (
+
+            <div className='sliders'>
+            <div className='DateContainer'>
+            <div className='dateInputLabel'>Date Selected:</div>
+            <MonthPickerInput
+            className='dateInput'
+            year={date.getFullYear()}
+            month={date.getMonth()}
+            onChange={function(selectedYear, selectedMonth) {
+                console.log(selectedYear, selectedMonth);
+            }} />
+
+        </div>
+
           <div className='category '>{Food}
           <div className='categoryName'>
                 <Slider className='icon Food' tipFormatter={percentFormatter} onAfterChange={this.changeData} onChange={this.onSliderChange.bind(this,'food')} value={this.state.food}/>
@@ -158,21 +176,23 @@ class SliderContainer extends Component {
                 <Slider className='icon Other' onAfterChange={this.changeData} onChange={this.onSliderChange.bind(this,'other')} value={this.state.other} />
               </div>
         </div>
-        <Button className='buttonSaveSliders'/>
+        <div className='buttonFooter'>
+        <Button buttonClassName='buttonSaveSlider ' buttonText={save} onClickEvent={this.saveData}/>
       </div>
-    );
-  }
+      </div>
+        );
+    }
 }
 
 const mapStateToProps = function(state, ownProps) {
-  return {
-    metricas: state.metricas
+    return {
+        metricas: state.metricas
 
-  };
+    };
 }
 
 SliderContainer.contextTypes = {
-  t: PropTypes.func.isRequired
+    t: PropTypes.func.isRequired
 }
 
 export default connect(mapStateToProps)(SliderContainer);
